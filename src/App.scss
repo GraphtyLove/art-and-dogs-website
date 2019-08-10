@@ -1,33 +1,12 @@
-.App {
-  text-align: center;
+// --------- FONTS ---------
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto&display=swap');
+
+body{
+  font-family: Roboto sans-serif;
+  background-color: white;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+h1 ,h2, h3, h4, h5, h6{
+  font-family: Baskerville sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
