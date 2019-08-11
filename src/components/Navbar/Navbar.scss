@@ -1,0 +1,29 @@
+@import "../../variables";
+
+nav {
+    display: flex;
+    align-items: baseline;
+    background-color: rgba(255,255,255,0.75);
+
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        margin-right: 30px;
+        list-style: none;
+        font-size: 25px;
+    }
+    h1{
+        font-size: 35px;
+        margin-left: 15%;
+    }
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+    #active{
+        border-bottom: 1px solid $GOLD;
+    }
+}
