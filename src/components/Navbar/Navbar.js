@@ -5,7 +5,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav>
-                <h1 id='active'>Art & Dogs</h1>
+                <h1 id='active'><a href="#">Art & Dogs</a></h1>
                 <ul>
                     <li><a href="#"> Nos services </a></li>
                     <li><a href="#"> Tarif </a></li>

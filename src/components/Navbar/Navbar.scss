@@ -4,7 +4,9 @@ nav {
     display: flex;
     align-items: baseline;
     background-color: rgba(255,255,255,0.75);
-
+    position: fixed;
+    max-height: 80px;
+    width: 100vw;
 
     ul {
         display: flex;
