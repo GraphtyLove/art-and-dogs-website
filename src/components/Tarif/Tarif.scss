@@ -1,0 +1,47 @@
+@import "../../variables";
+
+.watercolor-tarif{
+    height: 80vh;
+    transform: rotate(180deg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.tarif-container{
+    background-color: white;
+    border: 2px $GOLD solid;
+    display: inline-block;
+    padding: 20px;
+    margin: 30px;
+    header{
+        h3{
+            font-family: 'Roboto', 'sans-serif';
+            font-size: 29px;
+            font-weight: bold;
+        }
+        p{
+            font-family: 'Baskerville', 'sans-serif';
+            font-size: 17px;
+            //font-style: italic;
+        }
+    }
+    li{
+        display: flex;
+        list-style: none;
+        border-bottom: 1px #E8E8E8 solid;
+        justify-content: flex-end;
+        margin-bottom: 7px;
+        padding-bottom: 4px;
+        .table-name{
+            margin-right: auto;
+            text-align: left;
+        }
+        .price{
+            text-align: right;
+            margin-left: 40px;
+
+        }
+    }
+}

@@ -11,8 +11,7 @@ export default class Services extends Component {
         return (
             <Fragment>
                 <main className='services-container'>
-                    <div className=' colored-bg'>
-                     </div>
+                    <div className=' colored-bg' />
                     <header>
                         <h2 className='main-title'>Nos services</h2>
                         <div className='divider-black' />

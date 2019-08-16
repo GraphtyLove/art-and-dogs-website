@@ -1,5 +1,6 @@
 // --------- FONTS ---------
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto&display=swap');
+@import "./variables";
 
 body{
   font-family: 'Roboto', sans-serif;
@@ -30,8 +31,13 @@ button{
   margin-bottom: 10px;
   letter-spacing: 7px;
   font-weight: normal;
+  margin-top: 100px;
 }
 .divider-black{
   border-bottom: 10px solid black;
+  width: 50px;
+}
+.divider-colored{
+  border-bottom: 10px solid $GOLD;
   width: 50px;
 }
