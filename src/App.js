@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import Services from './components/Services/Services'
 import Tarif from './components/Tarif/Tarif'
+import Team from './components/Team/Team'
 
 // Add a State here that store the page we are and display the components in relation with it with simple conditions + change the url with a GET request (simulate routes)
 // OR
@@ -15,7 +16,9 @@ function App() {
             <Navbar />
             {/*<Home />*/}
             {/*<Services />*/}
-            <Tarif />
+            {/*<Tarif />*/}
+            <Team />
+
         </Fragment>
     );
 }

@@ -1,0 +1,37 @@
+@import "../../variables";
+
+.watercolor-team-top{
+    height: 50vh;
+    transform: rotate(180deg);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.watercolor-team-bottom{
+    height: 50vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.picture-daniele{
+    max-height: 300px;
+    border-radius: 50%;
+    border: 10px $GOLD solid;
+}
+
+.team-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.team-txt{
+    margin: 0 30px;
+    max-width: 600px;
+}
