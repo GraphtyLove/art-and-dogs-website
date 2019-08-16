@@ -9,6 +9,20 @@
     z-index: -1;
 }
 
+.main-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.tarif-sub-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 .tarif-container{
     background-color: white;
     border: 2px $GOLD solid;
@@ -20,12 +34,16 @@
             font-family: 'Roboto', 'sans-serif';
             font-size: 29px;
             font-weight: bold;
+            margin: 0;
         }
         p{
             font-family: 'Baskerville', 'sans-serif';
             font-size: 17px;
-            //font-style: italic;
+            margin: 4px 0;
         }
+    }
+    ul{
+        padding: 0;
     }
     li{
         display: flex;
@@ -37,11 +55,20 @@
         .table-name{
             margin-right: auto;
             text-align: left;
+
         }
         .price{
             text-align: right;
             margin-left: 40px;
-
+            font-style: italic;
         }
     }
+}
+.small{
+    font-style: italic;
+    font-size: 12px;
+}
+
+#grooming{
+    border-color: black;
 }

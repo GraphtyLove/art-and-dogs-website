@@ -11,8 +11,8 @@ export default class Tarif extends Component {
                     <h2 className='main-title'>Tarif</h2>
                     <div className='divider-colored' />
                 </header>
-                <main>
-                    <section className='tarif-container grooming'>
+                <main className='main-container'>
+                    <section className='tarif-container' id='grooming'>
                         <header className='header-table'>
                             <h3>Toilettage</h3>
                             <p>Le bain est obligatoire - le prix peut varrier selon l'état de l'animal</p>
@@ -140,14 +140,16 @@ export default class Tarif extends Component {
                                 </li>
                             </ul>
                         </section>
-                    <section className='tarif-container grooming'>
+                    <div className='tarif-sub-container'>
+
+                    <section className='tarif-container'>
                             <header className='header-table'>
                                 <h3>Thalassothérapie</h3>
                                 <p>Produits naturels sans SSL.</p>
                             </header>
                             <ul>
                                 <li className="thalasso">
-                                    <div className="thalasso-name table-name">Protocole Anti-mue <span className='small'>(Anti-nœuds, problème de peau)</span></div>
+                                    <div className="thalasso-name table-name">Protocole Anti-mue <br/> <span className='small'>(Anti-nœuds, problème de peau)</span></div>
                                     <div className="price">15€ en plus du toilettage ( 30 min )</div>
                                 </li>
                                 <li className="thalasso">
@@ -160,7 +162,7 @@ export default class Tarif extends Component {
                                 </li>
                             </ul>
                     </section>
-                    <section className='tarif-container grooming'>
+                    <section className='tarif-container'>
                             <header className='header-table'>
                                 <h3>Hors toilettage</h3>
                                 <p>Services.</p>
@@ -176,6 +178,7 @@ export default class Tarif extends Component {
                                 </li>
                             </ul>
                     </section>
+                    </div>
                 </main>
             </Fragment>
         );
