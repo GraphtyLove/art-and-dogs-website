@@ -15,9 +15,9 @@ function App() {
         <Fragment>
             <Navbar />
             {/*<Home />*/}
-            {/*<Services />*/}
+            <Services />
             {/*<Tarif />*/}
-            <Team />
+            {/*<Team />*/}
 
         </Fragment>
     );

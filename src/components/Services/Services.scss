@@ -23,6 +23,7 @@
         justify-content: center;
         min-height: 150px;
         height: 20%;
+        margin-bottom: 30px;
     }
     .colored-bg{
         background-color: $GOLD;
@@ -67,6 +68,10 @@
     }
     img{
         max-height: 80px;
+        width: auto;
+    }
+    .icone{
+        height: 50px;
         width: auto;
     }
     .box-center{
