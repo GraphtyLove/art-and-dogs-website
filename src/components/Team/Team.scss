@@ -7,6 +7,8 @@
     right: 0;
     top: 0;
     z-index: -1;
+        opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
 .watercolor-team-bottom{
@@ -22,7 +24,7 @@
 .picture-daniele{
     max-height: 300px;
     border-radius: 50%;
-    border: 10px $GOLD solid;
+    border: 7px $GOLD solid;
     margin-bottom: 30px;
 }
 
@@ -35,6 +37,12 @@
 }
 
 .team-txt{
+    #team-title{
+        font-weight: bold;
+        font-size: 28px;
+        border-bottom: 1px $GOLD solid;
+
+    }
     margin: 0 30px;
     max-width: 600px;
     text-align: justify;

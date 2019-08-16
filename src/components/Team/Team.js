@@ -18,6 +18,7 @@ export default class Team extends Component {
                         <img src={danieleSnijers} alt="Photo de Danièle Snijers" className='picture-daniele' />
                     </section>
                     <article className='team-txt'>
+                        <h3 id='team-title'>Daniele Snijers</h3>
                         <p>
                             Après mes études, j’ouvre mon salon de toilettage « DOG SALOON «  à Charleroi.  Je deviens
                             ensuite formatrice d'esthétique canine en promotion social pendant 10 ans. Mais la clientèle
