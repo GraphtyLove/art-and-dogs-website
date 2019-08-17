@@ -5,6 +5,7 @@
 body{
   font-family: 'Roboto', sans-serif;
   background-color: white;
+  min-height: 99vh;
 }
 
 h1 ,h2, h3, h4, h5, h6{
@@ -25,14 +26,7 @@ button{
   justify-content: center;
   align-items: center;
 }
-.main-title{
-  font-size: 88px;
-  text-align: center;
-  margin-bottom: 10px;
-  letter-spacing: 7px;
-  font-weight: normal;
-  margin-top: 100px;
-}
+
 .divider-black{
   border-bottom: 10px solid black;
   width: 50px;
@@ -43,6 +37,3 @@ button{
   margin-bottom: 50px;
 }
 
-h2{
-  padding-bottom: 20px;
-}

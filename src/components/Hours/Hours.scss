@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.hours-page{
+
+    .day-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .day{
+        font-size: 2rem;
+        font-weight: bold;
+        width: 400px;
+    }
+    .hours{
+        font-size: 28px;
+        font-style: italic;
+        text-align: right;
+        margin-left: auto;
+    }
+    .closed{
+        color: red;
+        font-weight: bold;
+    }
+}

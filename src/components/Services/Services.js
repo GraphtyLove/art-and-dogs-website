@@ -1,10 +1,18 @@
 import React, {Component, Fragment} from 'react';
+
+// Styles
 import './Services.scss'
+
+// Pictures
 import imgBath from '../../assets/img/bain.png'
 import imgTrimming from '../../assets/img/heart.png'
 import imgScissors from '../../assets/img/scisso.png'
 import imgPaw from '../../assets/img/paw.png'
 import serviceDog from '../../assets/img/serviceDog.png'
+
+// Components
+import PageTitle from '../PageTitle/PageTitle'
+
 
 export default class Services extends Component {
     render() {
@@ -12,10 +20,9 @@ export default class Services extends Component {
             <Fragment>
                 <main className='services-container'>
                     <div className=' colored-bg' />
-                    <header>
-                        <h2 className='main-title'>Nos services</h2>
-                        <div className='divider-black' />
-                    </header>
+
+                    <PageTitle title='Nos services' divider='divider-black' />
+
                     <div className='general-container'>
                     <section className='container-sub container-sub-left flex-center'>
                          <div className='box-center'>
@@ -35,7 +42,7 @@ export default class Services extends Component {
                             </article>
                         </div>
                     </section>
-                    <img className='service-Dog' src={serviceDog} alt="image de chien"/>
+                    <img className='service-Dog' src={serviceDog} alt="chien"/>
                     <section className='container-sub container-sub-right flex-center'>
                         <div className='box-center'>
                             <article className='article-right'>

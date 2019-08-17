@@ -15,22 +15,14 @@
     .container-sub-right{
         align-items: flex-start;
     }
-    header{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 150px;
-        height: 20%;
-        margin-bottom: 30px;
-    }
+
     .colored-bg{
         background-color: $GOLD;
         position: absolute;
         width: 50vw;
         height: 100vh;
         z-index: -1;
+
     }
     .colored-sub-container{
         height: 90%;

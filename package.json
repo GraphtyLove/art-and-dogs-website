@@ -7,6 +7,8 @@
     "nodesass": "0.0.2-security",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-grid-gallery": "^0.5.5",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.0"
   },
   "scripts": {

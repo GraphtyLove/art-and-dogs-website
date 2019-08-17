@@ -1,16 +1,16 @@
 import React, {Component, Fragment} from 'react';
 import './Tarif.scss'
 import waterColor from "../../assets/img/watercolor.png";
+import PageTitle from "../PageTitle/PageTitle";
 
 export default class Tarif extends Component {
     render() {
         return (
             <Fragment>
-                <header className='flex-center'>
-                    <img className='watercolor-tarif' src={waterColor} alt="watercolor background" />
-                    <h2 className='main-title'>Tarif</h2>
-                    <div className='divider-colored' />
-                </header>
+                <img className='watercolor-tarif' src={waterColor} alt="watercolor background" />
+
+                <PageTitle title='Tarif' divider='divider-colored' />
+
                 <main className='main-container'>
                     <section className='tarif-container' id='grooming'>
                         <header className='header-table'>
