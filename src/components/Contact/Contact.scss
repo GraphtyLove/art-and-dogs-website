@@ -3,3 +3,65 @@
 .bg-contact{
     background-color: $GOLD;
 }
+.contact-container{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    width: 40vw;
+    form{
+        display: flex;
+        flex-direction: column;
+        input, textarea{
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            height: 30px;
+            width: 90%;
+            &:focus{
+                outline: none !important;
+                box-shadow: 0 0 10px #fff;
+            }
+        }
+        textarea{
+            height: 120px;
+        }
+        .submit{
+            border-radius: 50px;
+            width: 150px;
+            height: 35px;
+            font-weight: bold;
+        }
+        label{
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
+
+.info-container{
+    align-self: flex-start;
+    width: 40vw;
+    li{
+        margin: 20px 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        img{
+            height: 30px;
+            width: auto;
+            margin-right: 5px;
+        }
+    }
+}
+
+.map{
+    border: none;
+}
