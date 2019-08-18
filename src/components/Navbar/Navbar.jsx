@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './Navbar.scss'
 
@@ -8,7 +8,7 @@ import Services from '../Services/Services'
 import Tarif from '../Tarif/Tarif'
 import Team from '../Team/Team'
 import GalleryDog from '../GalleryDog/GalleryDog'
-// import Contact from '../Contact/Contact'
+import Contact from '../Contact/Contact'
 import Hours from '../Hours/Hours'
 
 
@@ -32,7 +32,7 @@ export default class Navbar extends Component {
                 <Route exact path='/tarif' component={ Tarif } />
                 <Route exact path='/team' component={ Team } />
                 <Route path='/Gallery' component={ GalleryDog } />
-                {/*<Route path='/contact' component={ Contact } />*/}
+                <Route path='/contact' component={ Contact } />
                 <Route exact path='/hours' component={ Hours } />
             </Router>
         );

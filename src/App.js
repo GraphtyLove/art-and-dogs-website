@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './App.scss';
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar.jsx'
 
 
 function App() {
