@@ -1,8 +1,15 @@
 import React, {Component, Fragment} from 'react';
+
+// Styles
 import './Team.scss'
+
+// Pictures
 import waterColor from "../../assets/img/watercolor.png";
 import danieleSnijers from "../../assets/img/daniele-snijers.jpg";
+
+// Components
 import PageTitle from "../PageTitle/PageTitle";
+
 
 export default class Team extends Component {
     render() {

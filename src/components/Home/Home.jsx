@@ -1,7 +1,12 @@
 import React, {Component, Fragment} from 'react';
+
+// Styles
 import './Home.scss'
+
+// Pictures
 import waterColor from '../../assets/img/watercolor.png'
 import homeDog from '../../assets/img/homeDog.jpg'
+
 
 export default class Home extends Component {
     render() {

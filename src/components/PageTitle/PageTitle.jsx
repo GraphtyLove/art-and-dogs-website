@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
+
+// Styles
 import './PageTitle.scss'
+
 
 export default class PageTitle extends Component {
     render() {

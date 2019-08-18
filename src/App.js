@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react';
+
+// Styles
 import './App.scss';
+
+// Components
 import Navbar from './components/Navbar/Navbar.jsx'
 
 
-function App() {
+export default function App() {
     return (
         <Fragment>
             <Navbar /> {/* ROUTER */}
         </Fragment>
     );
 }
-
-export default App;

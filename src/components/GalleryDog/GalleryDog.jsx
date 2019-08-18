@@ -1,15 +1,15 @@
 import React, {Component, Fragment} from 'react';
 import Gallery from "react-grid-gallery";
 
-import photos, { tagColor } from './GalleryDogSettings'
-
 // Styles
 import './GalleryDog.scss'
 
+// Components
 import PageTitle from "../PageTitle/PageTitle";
+import photos from './GalleryDogSettings'
+
 
 export default class GalleryDog extends Component {
-
     render() {
         return (
             <Fragment>

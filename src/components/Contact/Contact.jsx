@@ -1,6 +1,11 @@
 import React, {Component, Fragment} from 'react';
-import PageTitle from "../PageTitle/PageTitle";
+
+// Styles
 import './Contact.scss'
+
+// Components
+import PageTitle from "../PageTitle/PageTitle";
+
 
 export default class Contact extends Component {
     render() {

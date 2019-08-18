@@ -1,7 +1,14 @@
 import React, {Component, Fragment} from 'react';
+
+// Styles
 import './Tarif.scss'
+
+// Pictures
 import waterColor from "../../assets/img/watercolor.png";
+
+// Components
 import PageTitle from "../PageTitle/PageTitle";
+
 
 export default class Tarif extends Component {
     render() {
