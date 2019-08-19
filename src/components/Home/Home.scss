@@ -1,19 +1,19 @@
 @import "../../variables";
 
 .watercolor{
-    height: 100vh;
+    height: 95vh;
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: -1;
 }
 .homeDog{
-    height: 100vh;
+    height: 95vh;
     width: auto;
     position: absolute;
     z-index: -2;
     right: 0;
-    top: 0;
+    bottom: 0;
     overflow: hidden;
 }
 

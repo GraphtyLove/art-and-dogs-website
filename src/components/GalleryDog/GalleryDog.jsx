@@ -7,6 +7,7 @@ import './GalleryDog.scss'
 // Components
 import PageTitle from "../PageTitle/PageTitle";
 import photos from './GalleryDogSettings'
+import PushToTop from "../PushToTop/PushToTop"
 
 
 export default class GalleryDog extends Component {
@@ -25,6 +26,7 @@ export default class GalleryDog extends Component {
                                                                                     textAlign: 'center',
                                                                                     verticalAlign: 'baseline',
                                                                                     whiteSpace: 'nowrap'}} />
+                <PushToTop />
             </Fragment>
         );
     }

@@ -10,6 +10,7 @@ import map from '../../assets/img/map.png'
 
 // Components
 import PageTitle from "../PageTitle/PageTitle";
+import PushToTop from "../PushToTop/PushToTop";
 
 
 export default class Contact extends Component {
@@ -21,9 +22,9 @@ export default class Contact extends Component {
                     <div className='contact-container'>
                         <section className='form-container'>
                             <form action="">
-                                <label htmlFor="">Nom<input type="text"/></label>
-                                <label htmlFor="">Adresse mail<input type="text"/></label>
-                                <label htmlFor="">Message<textarea /></label>
+                                <label htmlFor="">Nom<input type="text" placeholder='Entrer votre nom' /></label>
+                                <label htmlFor="">Adresse mail<input type="text" placeholder='Entrer votre email' /></label>
+                                <label htmlFor="">Message<textarea placeholder='Entrer votre message' /></label>
                                 <input className='submit' type="submit" value='Envoyer' />
                             </form>
                         </section>
@@ -40,6 +41,7 @@ export default class Contact extends Component {
                     <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.113816295115!2d4.42704241584942!3d50.38307680009807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2242bfbc4217b%3A0xac93b985ef300a19!2sArt+and+Dogs!5e0!3m2!1sfr!2sbe!4v1566169711322!5m2!1sfr!2sbe"
                         width="100%" height="450" allowFullScreen />
                 </section>
+                <PushToTop />
             </Fragment>
         );
     }

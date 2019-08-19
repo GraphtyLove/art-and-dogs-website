@@ -9,6 +9,7 @@ import danieleSnijers from "../../assets/img/daniele-snijers.jpg";
 
 // Components
 import PageTitle from "../PageTitle/PageTitle";
+import PushToTop from "../PushToTop/PushToTop"
 
 
 export default class Team extends Component {
@@ -40,6 +41,7 @@ export default class Team extends Component {
                         <p>Mais nous avons également une éleveuse et toiletteuse de chats: Amandine.</p>
                     </article>
                 </main>
+                <PushToTop />
             </Fragment>
         );
     }

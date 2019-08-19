@@ -8,7 +8,7 @@ import waterColor from "../../assets/img/watercolor.png";
 
 // Components
 import PageTitle from "../PageTitle/PageTitle";
-
+import PushToTop from "../PushToTop/PushToTop"
 
 export default class Tarif extends Component {
     render() {
@@ -187,6 +187,7 @@ export default class Tarif extends Component {
                     </section>
                     </div>
                 </main>
+                <PushToTop />
             </Fragment>
         );
     }
