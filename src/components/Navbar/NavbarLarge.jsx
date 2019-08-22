@@ -14,11 +14,11 @@ import Contact from '../Contact/Contact'
 import Hours from '../Hours/Hours'
 
 
-export default class Navbar extends Component {
+export default class NavbarLarge extends Component {
     render() {
         return (
             <Router>
-                <nav>
+                <nav className='nav-large'>
                     <h1 id='active'><Link to='/' >Art & Dogs</Link></h1>
                     <ul>
                         <li> <Link to='/services' >  Nos services </Link> </li>

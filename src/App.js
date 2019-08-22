@@ -4,13 +4,13 @@ import React, { Fragment } from 'react';
 import './App.scss';
 
 // Components
-import Navbar from './components/Navbar/Navbar.jsx'
+import NavbarLarge from './components/Navbar/NavbarLarge.jsx'
 
 
 export default function App() {
     return (
         <Fragment>
-            <Navbar /> {/* ROUTER */}
+            <NavbarLarge /> {/* ROUTER */}
         </Fragment>
     );
 }
