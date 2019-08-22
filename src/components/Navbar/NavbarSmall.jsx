@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { bubble as Menu } from 'react-burger-menu'
 
 // Styles
 import './Navbar.scss'
@@ -19,15 +20,17 @@ export default class NavbarSmall extends Component {
         return (
             <Router>
                 <nav className='nav-small'>
-                    <h1 id='active'><Link to='/' >Art & Dogs</Link></h1>
-                    <ul>
-                        <li> <Link to='/services' >  Nos services </Link> </li>
-                        <li> <Link to='/tarif' > Tarif </Link> </li>
-                        <li> <Link to='/team' > L'équipe </Link> </li>
-                        <li> <Link to='/Gallery' > Galerie </Link> </li>
-                        <li> <Link to='/contact' > Contact </Link> </li>
-                        <li> <Link to='/hours' > Nos heures </Link> </li>
-                    </ul>
+                    <Menu transition='elastic'>
+                        <h1 id='active'><Link to='/' >Art & Dogs</Link></h1>
+                        <ul>
+                            <li> <Link to='/services' >  Nos services </Link> </li>
+                            <li> <Link to='/tarif' > Tarif </Link> </li>
+                            <li> <Link to='/team' > L'équipe </Link> </li>
+                            <li> <Link to='/Gallery' > Galerie </Link> </li>
+                            <li> <Link to='/contact' > Contact </Link> </li>
+                            <li> <Link to='/hours' > Nos heures </Link> </li>
+                        </ul>
+                    </Menu>
                 </nav>
                 <Route exact path='/' component={ Home } />
                 <Route exact path='/services' component={ Services } />
