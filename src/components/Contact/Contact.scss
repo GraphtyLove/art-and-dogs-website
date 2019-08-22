@@ -54,6 +54,12 @@
         list-style: none;
         display: flex;
         align-items: center;
+        a{
+            color: #000;
+            &:visited{
+                color: #000;
+            }
+        }
         img{
             height: 30px;
             width: auto;
