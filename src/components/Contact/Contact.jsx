@@ -20,7 +20,7 @@ const API_PATH = 'http://localhost/art-and-dogs/api/contact.php';
 export default class Contact extends Component {
 
     constructor (props) {
-        super(props)
+        super(props);
         this.state = {
             name: '',
             email: '',
@@ -33,12 +33,20 @@ export default class Contact extends Component {
     // Send name, email and message to the PHP API
     handleFormSubmit( event ) {
         event.preventDefault();
+        console.log(this.state);
         axios({
             method: 'post',
             url: `${API_PATH}`,
-            headers: { 'content-type': 'application/x-www-form-urlencoded' },
+            headers: { 'content-type': 'application/json' },
             data: this.state
         })
+        // fetch(`${API_PATH}`, {
+		// 			headers: {
+		// 				'Content-Type': 'application/json',
+		// 			},
+		// 			method: 'POST',
+		// 			body: JSON.stringify(this.state),
+		// 		})
         .then(result => {
             if (result.data.sent) {
               this.setState({
@@ -108,7 +116,7 @@ export default class Contact extends Component {
                 </main>
                 <section>
                     <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.113816295115!2d4.42704241584942!3d50.38307680009807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2242bfbc4217b%3A0xac93b985ef300a19!2sArt+and+Dogs!5e0!3m2!1sfr!2sbe!4v1566169711322!5m2!1sfr!2sbe"
-                        title='Map' width="100%" height="450" allowFullScreen />
+                        title='map' width="100%" height="450" allowFullScreen />
                 </section>
                 <PushToTop />
             </Fragment>

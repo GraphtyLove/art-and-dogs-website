@@ -71,3 +71,29 @@
 .map{
     border: none;
 }
+
+@media screen and (max-width: 1060px){
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+    }
+    .form-container{
+        width: 90%;
+    }
+    .info-container{
+        width: 100%;
+        align-self: center;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            li{
+                margin: 0;
+            }
+        }
+    }
+}
