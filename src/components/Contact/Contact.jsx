@@ -15,7 +15,7 @@ import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
 // Locate the php API to will send the mail
-const API_PATH = 'http://localhost:3000/art-and-dog/api/contact.php';
+const API_PATH = 'http://localhost/art-and-dogs/api/contact.php';
 
 export default class Contact extends Component {
 
@@ -26,25 +26,32 @@ export default class Contact extends Component {
             email: '',
             message: '',
             mailSent: false,
-            error: null
+            error: null,
+            errorMessage: ''
         }
     }
-
+    // Send name, email and message to the PHP API
     handleFormSubmit( event ) {
         event.preventDefault();
         axios({
             method: 'post',
             url: `${API_PATH}`,
-            headers: { 'content-type': 'application/json' },
+            headers: { 'content-type': 'application/x-www-form-urlencoded' },
             data: this.state
         })
         .then(result => {
-            this.setState({
-            mailSent: result.data.sent
-          })
+            if (result.data.sent) {
+              this.setState({
+                mailSent: result.data.sent
+              });
+              this.setState({ error: false });
+            } else {
+              this.setState({ error: true });
+              this.setState({ errorMessage: result.data.message })
+            }
         })
-        .catch(error => this.setState({ error: error.message }));
-    }
+      .catch(error => this.setState({ error: error.message }));
+  };
 
     render() {
         return (
@@ -60,7 +67,7 @@ export default class Contact extends Component {
                                            type="text"
                                            placeholder='Entrer votre nom'
                                            value={this.state.name}
-                                           onChange={e => this.setState({ name: e.target.value })} />
+                                           onChange={ e => this.setState({ name: e.target.value })} />
                                 </label>
                                 <label>Adresse mail
                                     <input id='email'
@@ -68,24 +75,23 @@ export default class Contact extends Component {
                                            type="text"
                                            placeholder='Entrer votre email'
                                            value={this.state.email}
-                                           onChange={e => this.setState({ email: e.target.value })} />
+                                           onChange={ e => this.setState({ email: e.target.value })} />
                                 </label>
                                 <label>Message
                                     <textarea id='message'
                                               name='message'
                                               placeholder='Entrer votre message'
                                               value={this.state.message}
-                                              onChange={e => this.setState({ message: e.target.value })} />
+                                              onChange={ e => this.setState({ message: e.target.value })} />
                                 </label>
                                 <input
                                     className='submit'
                                     type="submit"
                                     value='Envoyer'
-                                    onClick={e => this.handleFormSubmit(e)} />
+                                    onClick={ e => this.handleFormSubmit(e) } />
                                 <div>
-                                  {this.state.mailSent &&
-                                    <div>Votre mail à bien été envoyé. Nous vous répondrons dés que possible.</div>
-                                  }
+                                  { this.state.mailSent && <div>Votre mail à bien été envoyé. Nous vous répondrons dés que possible.</div> }
+                                  { this.state.error && <div>Erreur: </div> }
                                 </div>
                             </form>
                         </section>
