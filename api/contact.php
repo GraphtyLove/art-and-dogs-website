@@ -1,12 +1,15 @@
 <?php
 include_once('classes/sendmail.php');
 include_once('config.php');
+
+$SendMailFailederrorMessage = "Something went wrong";
+$SendMailEmptyerrorMessage = "Empty form";
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
+
 $rest_json = file_get_contents("php://input");
 $_POST = json_decode($rest_json);
-echo gettype($_POST);
-echo $_POST->email;
 
 if( empty($_POST['name']) && empty($_POST['email']) ) {
     echo json_encode(
@@ -15,7 +18,6 @@ if( empty($_POST['name']) && empty($_POST['email']) ) {
            "message" => $SendMailEmptyerrorMessage
         ]
     );
-    echo $_POST['name'];
     exit();
 }
 if ($_POST){
@@ -32,9 +34,6 @@ if ($_POST){
     $sendEmail = new Sender($adminEmail, $from, $subject, $message);
     $sendEmail->send();
     echo "after send";
-//    echo $_POST['email'];
-//    echo $_POST['name'];
-//    echo $_POST['message'];
 }
 else {
  // tell the user about error

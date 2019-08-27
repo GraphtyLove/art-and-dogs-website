@@ -1,4 +1,2 @@
 <?php
-$adminEmail =  "maxim.berge@gmail.com"; //Please change this to yours
-$SendMailFailederrorMessage = "Something went wrong";
-$SendMailEmptyerrorMessage = "Empty form";
+$adminEmail =  "maxim.berge@gmail.com"; // Email that SEND the emails
