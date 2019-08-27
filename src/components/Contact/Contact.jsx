@@ -15,56 +15,56 @@ import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
 // Locate the php API to will send the mail
-const API_PATH = "http://localhost/art-and-dogs/api/test.php";
+const API_PATH = "http://localhost/art-and-dogs/api/mailer.php";
 
 export default class Contact extends Component {
 
     constructor (props) {
         super(props);
+        // STATE :
         this.state = {
             name: "",
             email: "",
             message: "",
             mailSent: false,
             error: null,
-            errorMessage: ""
+            errorMessage: "",
+            successMessage: ""
         }
     }
     // Send name, email and message to the PHP API
     handleFormSubmit( event ) {
         event.preventDefault();
         console.log(this.state);
-        // axios({
-        //     method: "post",
-        //     url: `${API_PATH}`,
-        //     headers: { "content-type": "application/json" },
-        //     data: JSON.stringify(this.state)
-        // })
 
         fetch(`${API_PATH}`, {
 					headers: {
 						"Content-Type": "application/json",
 					},
 					method: "POST",
-					body: this.state,
+					body: JSON.stringify(this.state),
 				})
         .then(result => result.json())
-            .then(json => {
-            console.log(json);
-            if (json.sent) {
+            .then(resultJson => {
+            console.log(resultJson);
+            if (resultJson.sent) {
               this.setState({
-                mailSent: json.sent
+                mailSent: resultJson.sent,
+                successMessage: resultJson.message,
+                error: false
               });
-              this.setState({ error: false });
             } else {
-              this.setState({ error: true });
               this.setState({
-                mailSent: json.sent
+                  error: true,
+                  mailSent: resultJson.sent,
+                  errorMessage: resultJson.message
               });
-              this.setState({ errorMessage: json.message })
             }
         })
-      .catch(error => this.setState({ error: error.message }));
+      .catch(error => this.setState({
+          errorMessage: error.message,
+          error: true
+      }));
   };
 
     render() {
@@ -79,14 +79,14 @@ export default class Contact extends Component {
                                     <input id="name"
                                            name="name"
                                            type="text"
-                                           placeholder="Entrer votre nom"
+                                           placeholder="Entrer votre nom et prénom"
                                            value={this.state.name}
                                            onChange={ e => this.setState({ name: ""+e.target.value })} />
                                 </label>
                                 <label>Adresse mail
                                     <input id="email"
                                            name="email"
-                                           type="text"
+                                           type="email"
                                            placeholder="Entrer votre email"
                                            value={this.state.email}
                                            onChange={ e => this.setState({ email: ""+e.target.value })} />
@@ -103,15 +103,18 @@ export default class Contact extends Component {
                                     type="submit"
                                     value="Envoyer"
                                     onClick={ e => this.handleFormSubmit(e) } />
-                                <div>
-                                  { this.state.mailSent && <div>Votre mail à bien été envoyé. Nous vous répondrons dés que possible.</div> }
-                                  { this.state.error && <div> Erreur: { this.state.error } </div> }
+
+                                    {/*Display if the mail is sent or not and why*/}
+                                <div className='mail-answer'>
+                                  { this.state.mailSent && <div className='success-message'> { this.state.successMessage } </div> }
+                                  { this.state.error && <div className='error-message'> Erreur: { this.state.errorMessage } </div> }
                                 </div>
+
                             </form>
                         </section>
                         <section className="info-container">
                             <ul>
-                                <li><img src={mail} alt="mail"/> <p> DanieleSnijers@gmail.com </p></li>
+                                <li><img src={mail} alt="mail"/> <p><a href="mailto:danielesnijers@gmail.com">  DanieleSnijers@gmail.com </a></p></li>
                                 <li><img src={phone} alt="téléphone"/> <p><a href="tel:+32496868687"> 0496 / 86 86 87 </a></p></li>
                                 <li><img src={map} alt="carte"/> <p> Avenue Eugène Mascaux 781, 6001, Marcinelle </p></li>
                                 <li><img src={facebook} alt="facebook"/> <p><a href="https://www.facebook.com/artanddogs/">Art and Dogs</a> </p></li>
