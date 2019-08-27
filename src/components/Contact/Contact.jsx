@@ -46,18 +46,22 @@ export default class Contact extends Component {
 						"Content-Type": "application/json",
 					},
 					method: "POST",
-					body: JSON.stringify(this.state),
+					body: this.state,
 				})
-
-        .then(result => {
-            if (result.data.sent) {
+        .then(result => result.json())
+            .then(json => {
+            console.log(json);
+            if (json.sent) {
               this.setState({
-                mailSent: result.data.sent
+                mailSent: json.sent
               });
               this.setState({ error: false });
             } else {
               this.setState({ error: true });
-              this.setState({ errorMessage: result.data.message })
+              this.setState({
+                mailSent: json.sent
+              });
+              this.setState({ errorMessage: json.message })
             }
         })
       .catch(error => this.setState({ error: error.message }));
