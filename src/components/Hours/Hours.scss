@@ -14,6 +14,7 @@
         font-size: 2rem;
         font-weight: bold;
         width: 400px;
+        max-width: 100%;
     }
     .hours{
         font-size: 28px;
@@ -25,6 +26,9 @@
         color: red;
         font-weight: bold;
     }
+    .hours-global{
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -35,6 +39,9 @@
         }
         .day{
             text-align: center;
+        }
+        .day, .hours{
+            font-size: 1.5rem;
         }
     }
 }

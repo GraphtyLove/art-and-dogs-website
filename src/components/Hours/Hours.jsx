@@ -9,7 +9,7 @@ export default class Hours extends Component {
                 <PageTitle title="Nos heures d'ouvertures" divider='divider-colored' />
 
                 <main className='hours-page flex-center'>
-                    <div className='hours-global-c'>
+                    <div className='hours-global'>
                         <section className="day-container">
                             <div className="day">Lundi</div>
                             <div className="hours closed">Fermé</div>
