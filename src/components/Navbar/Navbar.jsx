@@ -24,7 +24,7 @@ const logWidth = () => {
 	}
 };
 
-// Initialize viewportWidth & viewPortWidthIsLarge when the page load
+// Initialize $viewportWidth & $viewPortWidthIsLarge when the page load
 setViewportWidth();
 logWidth();
 
@@ -35,14 +35,14 @@ export default class Navbar extends Component {
         this.state = {
             viewPortWidthIsLarge: viewPortWidthIsLarge
         };
-        // bind the "this" of handleResize to the this of the class
+        // bind the "this" of handleResize() to the "this" of the Class
         this.handleResize = this.handleResize.bind(this)
     }
     // Add an event listener when the user RESIZE the window => call handleResize()
     componentDidMount(){
         window.addEventListener('resize', this.handleResize)
     }
-    // Change the state viewPortWidthIsLarge depending on the size of the window
+    // Change the state $viewPortWidthIsLarge depending on the size of the window
     handleResize(){
         setViewportWidth();
         if (viewportWidth > 1060) {

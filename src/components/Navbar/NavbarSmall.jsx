@@ -16,19 +16,38 @@ import Hours from '../Hours/Hours'
 
 
 export default class NavbarSmall extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+          menuOpen: false
+        }
+    }
+
+    handleStateChange (state) {
+        this.setState({ menuOpen: state.isOpen })
+    }
+
+    closeMenu () {
+        this.setState({menuOpen: false})
+    }
+
     render() {
         return (
             <Router>
                 <nav className='nav-small'>
-                    <Menu transition='elastic'>
-                        <h1 id='active'><Link to='/' >Art & Dogs</Link></h1>
+                    <Menu
+                        transition='elastic'
+                        disableAutoFocus
+                        isOpen={ this.state.menuOpen }
+                        onStateChange={ (state) => this.handleStateChange(state) }>
+                        <h1 id='active'><Link onClick={ () => this.closeMenu() } to='/' >Art & Dogs</Link></h1>
                         <ul>
-                            <li> <Link to='/services' >  Nos services </Link> </li>
-                            <li> <Link to='/tarif' > Tarif </Link> </li>
-                            <li> <Link to='/team' > L'équipe </Link> </li>
-                            <li> <Link to='/Gallery' > Galerie </Link> </li>
-                            <li> <Link to='/contact' > Contact </Link> </li>
-                            <li> <Link to='/hours' > Nos heures </Link> </li>
+                            <li> <Link onClick={ () => this.closeMenu() } to='/services' >  Nos services </Link> </li>
+                            <li> <Link onClick={ () => this.closeMenu() } to='/tarif' > Tarif </Link> </li>
+                            <li> <Link onClick={ () => this.closeMenu() } to='/team' > L'équipe </Link> </li>
+                            <li> <Link onClick={ () => this.closeMenu() } to='/Gallery' > Galerie </Link> </li>
+                            <li> <Link onClick={ () => this.closeMenu() } to='/contact' > Contact </Link> </li>
+                            <li> <Link onClick={ () => this.closeMenu() } to='/hours' > Nos heures </Link> </li>
                         </ul>
                     </Menu>
                 </nav>
