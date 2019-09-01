@@ -12,7 +12,6 @@ export default class App extends Component {
     render(){
         return (
             <Fragment>
-                <Background />
                 <Navbar />
             </Fragment>
         );

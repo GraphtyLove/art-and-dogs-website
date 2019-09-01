@@ -1,5 +1,18 @@
 .ReactGridGallery{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1400px) {
+    .ReactGridGallery {
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .ReactGridGallery {
+        justify-content: center;
+    }
 }

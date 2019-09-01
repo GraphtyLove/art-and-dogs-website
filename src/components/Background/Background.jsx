@@ -11,8 +11,8 @@ export default class Background extends Component {
     render() {
         return (
             <Fragment>
-                <img className='watercolor' src={waterColor} alt="watercolor background" />
-                <img className='homeDog' src={homeDog} alt="homeDog background" />
+                <img id='waterColor' className='waterColor' src={waterColor} alt="watercolor background" />
+                <img id='homeDog' className='homeDog' src={homeDog} alt="homeDog background" />
             </Fragment>
         );
     }

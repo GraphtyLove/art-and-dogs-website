@@ -3,19 +3,16 @@ import React, {Component, Fragment} from 'react';
 // Styles
 import './Tarif.scss'
 
-// Pictures
-import waterColor from "../../assets/img/watercolor.png";
-
 // Components
 import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop"
+import Background from "../Background/Background";
 
 export default class Tarif extends Component {
     render() {
         return (
             <Fragment>
-                <img className='watercolor-tarif' src={waterColor} alt="watercolor background" />
-
+                <Background />
                 <PageTitle title='Tarif' divider='divider-colored' />
 
                 <main className='main-container'>

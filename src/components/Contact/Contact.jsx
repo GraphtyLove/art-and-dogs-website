@@ -17,7 +17,6 @@ import PushToTop from "../PushToTop/PushToTop";
 const API_PATH = "http://localhost/art-and-dogs/api/mailer.php";
 
 export default class Contact extends Component {
-
     constructor (props) {
         super(props);
         // STATE :

@@ -44,7 +44,6 @@ export default class Team extends Component {
                         <p>Mais nous avons également une éleveuse et toiletteuse de chats: Amandine Voet.</p>
                     </article>
                 </main>
-                <PushToTop />
             </Fragment>
         );
     }
