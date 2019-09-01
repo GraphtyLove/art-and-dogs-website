@@ -9,7 +9,6 @@ import danieleSnijers from "../../assets/img/daniele-snijers.jpg";
 
 // Components
 import PageTitle from "../PageTitle/PageTitle";
-import PushToTop from "../PushToTop/PushToTop"
 
 
 export default class Team extends Component {
