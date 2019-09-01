@@ -105,7 +105,7 @@ export default class Contact extends Component {
                                     {/*Display if the mail is sent or not and why*/}
                                 <div className='mail-answer'>
                                   { this.state.mailSent && <div className='success-message'> { this.state.successMessage } </div> }
-                                  { this.state.error && <div className='error-message'> Erreur: { this.state.errorMessage } </div> }
+                                  { this.state.error && <div className='error-message'> { this.state.errorMessage } </div> }
                                 </div>
 
                             </form>

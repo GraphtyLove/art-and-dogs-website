@@ -73,6 +73,29 @@
     border: none;
 }
 
+.mail-answer{
+    display: flex;
+    justify-content: center;
+}
+
+.success-message{
+    background-color: #58c300;
+    border-radius: 10px;
+    padding: 13px;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+.error-message{
+    background-color: #f73000;
+    border-radius: 10px;
+    padding: 13px;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    //border-left: 3px solid white;
+}
+
 @media screen and (max-width: 1060px){
     .contact-container{
         display: flex;
