@@ -34,7 +34,7 @@ export default class Hours extends Component {
                         </section>
                         <section className="day-container">
                             <div className="day">Samedi</div>
-                            <div className="hours">10h - 18h</div>
+                            <div className="hours">10h - 17h</div>
                         </section>
                         <section className="day-container">
                             <div className="day">Dimanche</div>

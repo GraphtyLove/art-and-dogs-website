@@ -76,7 +76,7 @@ export default class Tarif extends Component {
                                 </li>
                                 <li className="breed">
                                     <div className="breed-name table-name">Chihuahua poils courts</div>
-                                    <div className="price">25€</div>
+                                    <div className="price">30€</div>
                                 </li>
                                 <li className="breed">
                                     <div className="breed-name table-name">Chow Chow</div>
@@ -119,7 +119,7 @@ export default class Tarif extends Component {
                                     <div className="price">40€</div>
                                 </li>
                                 <li className="breed">
-                                    <div className="breed-name table-name">Shi Tzu</div>
+                                    <div className="breed-name table-name">Shih Tzu</div>
                                     <div className="price">40€ / 50€</div>
                                 </li>
                                 <li className="breed">

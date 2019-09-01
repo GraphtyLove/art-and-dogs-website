@@ -1,4 +1,3 @@
-// GalleryDog images
 import photo1 from "../../assets/img/Gallery/Gallery-1.jpg";
 import photo2 from "../../assets/img/Gallery/Gallery-2.jpg";
 import photo3 from "../../assets/img/Gallery/Gallery-3.jpg";
@@ -24,123 +23,83 @@ const photos = [
   {
     src: photo1,
     thumbnail: photo1,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo2,
     thumbnail: photo2,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
 
   },
   {
     src: photo3,
     thumbnail: photo3,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo4,
     thumbnail: photo4,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo5,
     thumbnail: photo5,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo6,
     thumbnail: photo6,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Berger Allemamd", title: "Berger Allemamd"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo7,
     thumbnail: photo7,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Collie", title: "Collie"}, {value: "poils long", title: "poils long"}],
   },
   {
     src: photo8,
     thumbnail: photo8,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo9,
     thumbnail: photo9,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo10,
     thumbnail: photo10,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo11,
     thumbnail: photo11,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo12,
     thumbnail: photo12,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo13,
     thumbnail: photo13,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo14,
     thumbnail: photo14,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo15,
     thumbnail: photo15,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo16,
     thumbnail: photo16,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo17,
     thumbnail: photo17,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo18,
     thumbnail: photo18,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo19,
     thumbnail: photo19,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
   {
     src: photo20,
     thumbnail: photo20,
-    caption: 'ceci est un titre',
-    // tags: [{value: "Labrador", title: "Labrador"}, {value: "poils courts", title: "poils courts"}],
   },
 ];
 
