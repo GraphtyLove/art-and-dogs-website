@@ -20,12 +20,6 @@ import photo18 from "../../assets/img/Gallery/Gallery-18.jpg";
 import photo19 from "../../assets/img/Gallery/Gallery-19.jpg";
 import photo20 from "../../assets/img/Gallery/Gallery-20.jpg";
 
-export const tagColor = () => {
-    return ({
-        color: '#FEBE51'
-    })
-}
-
 const photos = [
   {
     src: photo1,
