@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 
 // * ---------- EMAIL RECEIVER --------- *
-$adminEmail =  "maxim.berge@gmail.com"; // Email that SEND the emails
+$adminEmail =  "danielesnijers@gmail.com"; // Email that SEND the emails
 
 // * ---------- ERROR MESSAGES --------- *
 $emptyErrorMessage = "Formulaire incomplet. Veuillez remplir tous les champs.";
