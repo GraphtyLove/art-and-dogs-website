@@ -42,3 +42,32 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .home {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home{
+        h2{
+            font-size: 4em;
+            margin-top: 100px;
+        }
+        h3{
+            font-size: 3em;
+            text-align: center;
+        }
+        p{
+            font-size: 1.5em;
+            text-align: center;
+        }
+        button{
+            margin-bottom: 50px;
+        }
+    }
+}

@@ -18,7 +18,7 @@ export default class GalleryDog extends Component {
                 <Background />
                 <PageTitle title='Galerie' divider='divider-colored' />
                 <main className='gallery-container'>
-                    <Gallery images={ photos }  enableImageSelection={false} tagStyle={{color:'#FEBE51',
+                    <Gallery images={ photos }  enableImageSelection={ false } tagStyle={{color:'#FEBE51',
                                                                                         backgroundColor: 'rgba(0,0,0,0.65)',
                                                                                         padding: '0.2em 0.6em 0.3em',
                                                                                         borderRadius: '0.25em',
