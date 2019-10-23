@@ -10,7 +10,7 @@ Made in react.
 
 ## Who?
 
-made with ❤️ by [Cassandra Caestecker](https://www.linkedin.com/in/cassandra-caestecker/) and [Maxim Berge](https://www.linkedin.com/in/maxim-berge-94b486179/).
+Made with ❤️ by [Cassandra Caestecker](https://www.linkedin.com/in/cassandra-caestecker/) and [Maxim Berge](https://www.linkedin.com/in/maxim-berge-94b486179/).
 
 ## Screenshot
 ![Screenshot of the website](screenshot-site.png)
