@@ -14,9 +14,9 @@ import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
 // Locate the php API to will send the mail
-const API_PATH = "http://localhost/art-and-dogs/api/appointment.php";
+const API_PATH = "http://localhost/art-and-dogs/api/appointment.php"
 
-const Contact = props => {
+const Contact = () => {
     // STATE :
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
@@ -36,7 +36,7 @@ const Contact = props => {
             lastName: lastName,
             phone: phone,
             dogName: dogName,
-            dogBreed: dogBreed,
+            dogBreed: dogBreed
         }
 
         fetch(`${API_PATH}`, {
@@ -49,7 +49,7 @@ const Contact = props => {
             .then(result => result.json())
             .then(resultJson => {
                 console.log('result', resultJson)
-                resultJson.success ? setFormSuccessMessage(true) : setFormErrormessage(true)
+                resultJson.sent ? setFormSuccessMessage(resultJson.message) : setFormErrormessage(resultJson.message)
             })
             .catch(err => console.log('error: ', err))
     }
@@ -134,8 +134,14 @@ const Contact = props => {
                 </div>
             </main>
             <section>
-                <iframe className="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.113816295115!2d4.42704241584942!3d50.38307680009807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2242bfbc4217b%3A0xac93b985ef300a19!2sArt+and+Dogs!5e0!3m2!1sfr!2sbe!4v1566169711322!5m2!1sfr!2sbe"
-                    title="map" width="100%" height="450" allowFullScreen />
+                <iframe
+                    className="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.113816295115!2d4.42704241584942!3d50.38307680009807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2242bfbc4217b%3A0xac93b985ef300a19!2sArt+and+Dogs!5e0!3m2!1sfr!2sbe!4v1566169711322!5m2!1sfr!2sbe"
+                    title="map"
+                    width="100%"
+                    height="450"
+                    allowFullScreen
+                />
             </section>
             <PushToTop />
         </Fragment>
