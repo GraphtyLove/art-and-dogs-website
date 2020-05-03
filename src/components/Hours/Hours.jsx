@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import './Hours.scss'
 import PageTitle from "../PageTitle/PageTitle";
 import Background from "../Background/Background";
@@ -18,7 +18,7 @@ export default class Hours extends Component {
                         </section>
                         <section className="day-container">
                             <div className="day">Mardi</div>
-                            <div className="hours">10h - 18h</div>
+                            <div className="hours">10h - 17h</div>
                         </section>
                         <section className="day-container">
                             <div className="day">Mercredi</div>
@@ -26,11 +26,11 @@ export default class Hours extends Component {
                         </section>
                         <section className="day-container">
                             <div className="day">Jeudi</div>
-                            <div className="hours">10h - 18h</div>
+                            <div className="hours">10h - 17h</div>
                         </section>
                         <section className="day-container">
                             <div className="day">Vendredi</div>
-                            <div className="hours">10h - 18h</div>
+                            <div className="hours">10h - 17h</div>
                         </section>
                         <section className="day-container">
                             <div className="day">Samedi</div>
