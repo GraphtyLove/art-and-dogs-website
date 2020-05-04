@@ -14,7 +14,7 @@ import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
 // Locate the php API to will send the mail
-const API_PATH = "http://localhost/art-and-dogs/api/appointment.php"
+const API_PATH = "http://51.210.8.134:5000/appointment-client"
 
 const Contact = () => {
     // STATE :
@@ -39,7 +39,7 @@ const Contact = () => {
             dogBreed: dogBreed
         }
 
-        fetch(`${API_PATH}`, {
+        fetch(API_PATH, {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -49,7 +49,12 @@ const Contact = () => {
             .then(result => result.json())
             .then(resultJson => {
                 console.log('result', resultJson)
-                resultJson.sent ? setFormSuccessMessage(resultJson.message) : setFormErrormessage(resultJson.message)
+                if (resultJson.success) {
+                    setFormSuccessMessage("Votre rendez-vous à bien été envoyé. Nous vous recontactons dans les plus brefs délais.")
+                    setFormErrormessage("")
+                } else {
+                    setFormErrormessage(resultJson.error)
+                }
             })
             .catch(err => console.log('error: ', err))
     }
@@ -115,11 +120,11 @@ const Contact = () => {
                                 Envoyer
                             </button>
                         </section>
+
                         {formSuccessMessage && <p className="success">{formSuccessMessage}</p>}
-                        {formSuccessMessage && setFormErrormessage("")}
 
                         {formErrormessage && <p className="error"> {formErrormessage} </p>}
-                        {formErrormessage && setFormSuccessMessage("")}
+
                     </section>
                     <section className="info-container">
                         <h2>Informations de contact</h2>
