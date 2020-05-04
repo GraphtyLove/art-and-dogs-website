@@ -1,18 +1,31 @@
 import React from 'react'
 
-const deleteAppointment = appointmentId => {
-    console.log("deleting: ", appointmentId)
-}
+const API_URL = "http://51.210.8.134:5000/"
 
 
 const AppointmentItem = props => {
-    const SMS_STRING = `sms://${props.phone};?&body=Salon Art and dogs bonjour, je vous contact suite à votre demande de rendez-vous effectuée le ${props.date} Je peux vous proposer le:   à   .Merci de me confirmer ou non votre présence. Une bonne journée.`
+    const SMS_STRING = `sms://${props.phone};?&body=Salon Art and Dogs bonjour, je vous contacte suite à votre demande de rendez-vous effectuée le ${props.date} Je peux vous proposer le:   à   . Merci de me confirmer ou non votre présence. Une bonne journée.`
+    const CALL_STRING = `tel:${props.phone}`
+
+    const deleteAppointment = appointmentId => {
+        fetch(API_URL + "appointment-delete", {
+            headers: {
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify({ id: appointmentId }),
+        })
+            .then(result => result.json())
+            .then(resultJson => {
+
+            })
+            .catch(err => console.log('error: ', err))
+    }
+
     return (
         <div className="appointmentCard">
             <header>
-                {/* TODO: Add a real date in the DB/backend */}
-                {/* <time>{props.date}</time> */}
-                <time>18/04/2020</time>
+                <time>{props.date}</time>
                 <p>Status: <span className="statusBubble redBg" /> </p>
             </header>
             <main>
@@ -20,6 +33,7 @@ const AppointmentItem = props => {
                     <ul>
                         <li>Client:</li>
                         <li>Chien:</li>
+                        <li>Remarque du client:</li>
                         <li>Note:</li>
                     </ul>
                 </section>
@@ -28,7 +42,7 @@ const AppointmentItem = props => {
                         <li>
                             <p className="bold">{props.clientName}</p>
                             <p><a
-                                href={SMS_STRING}
+                                href={CALL_STRING}
                             >
                                 {props.phone}
                             </a></p>
@@ -36,6 +50,9 @@ const AppointmentItem = props => {
                         <li>
                             <p className="bold">{props.dogName}</p>
                             <p>{props.dogBreed}</p>
+                        </li>
+                        <li>
+                            <p>{props.remarque}</p>
                         </li>
                         <li>
                             <p>{props.note}</p>
@@ -47,6 +64,11 @@ const AppointmentItem = props => {
                 <button className="redBg" onClick={() => deleteAppointment(props.id)}>
                     SUPPRIMER
                 </button>
+                <a href={SMS_STRING}>
+                    <button className="blueBg">
+                        SMS
+                </button>
+                </a>
                 <button className="greenBg" onClick={() => deleteAppointment(props.id)}>
                     EN ATTENTE
                 </button>

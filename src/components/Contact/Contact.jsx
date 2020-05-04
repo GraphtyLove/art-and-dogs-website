@@ -14,7 +14,7 @@ import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
 // Locate the php API to will send the mail
-const API_PATH = "http://51.210.8.134:5000/appointment-client"
+const API_PATH = "http://51.210.8.134:5000/"
 
 const Contact = () => {
     // STATE :
@@ -23,6 +23,7 @@ const Contact = () => {
     const [phone, setPhone] = useState("")
     const [dogName, setDogName] = useState("")
     const [dogBreed, setDogBreed] = useState("")
+    const [remarque, setRemarque] = useState("")
     const [formSuccessMessage, setFormSuccessMessage] = useState("")
     const [formErrormessage, setFormErrormessage] = useState("")
 
@@ -36,10 +37,11 @@ const Contact = () => {
             lastName: lastName,
             phone: phone,
             dogName: dogName,
-            dogBreed: dogBreed
+            dogBreed: dogBreed,
+            remarque: remarque
         }
 
-        fetch(API_PATH, {
+        fetch(API_PATH + "appointment-client", {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -113,6 +115,15 @@ const Contact = () => {
                                 placeholder="Caniche"
                                 value={dogBreed}
                                 onChange={e => setDogBreed(e.target.value)}
+                            />
+                        </section>
+                        <section>
+                            <h3>Remarques</h3>
+                            <input
+                                type="text"
+                                placeholder="Je ne suis disponible que..."
+                                value={dogBreed}
+                                onChange={e => setRemarque(e.target.value)}
                             />
                         </section>
                         <section>

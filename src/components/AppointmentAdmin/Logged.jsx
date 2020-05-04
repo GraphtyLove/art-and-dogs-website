@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react'
 import PushToTop from "../PushToTop/PushToTop"
-import PageTitle from "../PageTitle/PageTitle"
 import AppointmentItem from "./AppointmentItem"
 // Style:
 import "./appointment.scss"
@@ -37,12 +36,15 @@ const Logged = props => {
             {props.appointmentList
                 && props.appointmentList.length > 0
                 && props.appointmentList.map(appointment => <AppointmentItem
-                    key={appointment.id}
+                    key={appointment._id.$oid}
+                    id={appointment._id.$oid}
+                    date={appointment.date}
                     clientName={appointment.firstName + ' ' + appointment.lastName}
                     phone={appointment.phone}
                     dogName={appointment.dogName}
                     dogBreed={appointment.dogBreed}
                     status={appointment.status}
+                    remarque={appointment.remarque}
                     note={appointment.note}
                 />)
             }

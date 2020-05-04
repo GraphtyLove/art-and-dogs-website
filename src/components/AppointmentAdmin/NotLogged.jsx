@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import getUserNameAndPasswordFromCookies from '../../utils/cookie'
 
 const inputClass = {
     marginBottom: "20px"
@@ -10,6 +11,14 @@ const NotLogged = props => {
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
 
+    // On mount:
+    useEffect(() => {
+        let userData = getUserNameAndPasswordFromCookies()
+        if (userData.userName && userData.userName.length > 0 && userData.password && userData.password.length > 0) {
+            console.log('connecting...')
+            props.loggingFunction(userData.userName, userData.password)
+        }
+    }, [])
 
     // Handle changes:
     const handleChangeUserName = event => setUserName(event.target.value)
