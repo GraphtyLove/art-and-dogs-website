@@ -17,18 +17,16 @@ const Logged = props => {
 
     return (
         <Fragment>
-            <PageTitle title="Mes rendez-vous" divider="divider-black" />
-
-            <section >
-                <button sty
-                    className="switcherContainer switcherLeft"
+            <section className="switcherContainer">
+                <button
+                    className="switchButton switcherLeft"
                     onClick={() => setSwitcher("todo")}
                     style={switcher === 'todo' ? activeSwitcher : null}
                 >
                     A contacter
                 </button>
                 <button
-                    className="switcherContainer switcherRight"
+                    className="switchButton switcherRight"
                     onClick={() => setSwitcher("waiting")}
                     style={switcher === 'waiting' ? activeSwitcher : null}
                 >
