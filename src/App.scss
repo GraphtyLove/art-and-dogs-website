@@ -27,6 +27,13 @@ button{
   align-items: center;
 }
 
+.flex-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .divider-black{
   border-bottom: 10px solid black;
   width: 50px;

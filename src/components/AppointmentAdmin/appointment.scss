@@ -1,0 +1,14 @@
+.switcherContainer {
+    display: 'flex';
+    justify-content: 'center';
+    border: '1px solid white';
+}
+
+.switcherLeft {
+    border-radius: '0 17px 17px 0';
+}
+
+.switcherRight {
+    border-radius: '17px 0 0 17px';
+}
+

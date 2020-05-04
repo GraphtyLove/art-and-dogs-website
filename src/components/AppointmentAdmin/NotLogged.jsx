@@ -4,10 +4,13 @@ const inputClass = {
     marginBottom: "20px"
 }
 
+
 const NotLogged = props => {
     // States:
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
+
+
     // Handle changes:
     const handleChangeUserName = event => setUserName(event.target.value)
     const handleChangePassword = event => setPassword(event.target.value)
@@ -35,9 +38,10 @@ const NotLogged = props => {
                     />
                 </div>
                 <div className="flex-center">
-                    <button onClick={props.loggingFunction}>Se connecter</button>
+                    <button onClick={() => props.loggingFunction(userName, password)}>Se connecter</button>
                 </div>
             </div>
+            {props.loginError && <p className="error">{props.loginError}</p>}
         </section>
     )
 }

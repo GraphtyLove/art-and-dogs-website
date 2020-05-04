@@ -5,41 +5,45 @@ import PageTitle from "../PageTitle/PageTitle"
 import Logged from "./Logged"
 import NotLogged from "./NotLogged"
 
-const API_PATH = "http://localhost/art-and-dogs/api/appointment-admin.php"
+const API_PATH = "http://51.210.8.134:5000/appointment-admin"
 
 const AppointmentAdmin = () => {
     // State
-    const [isLogged, setIsLogged] = useState(false)
-    const [appointmentList, setAppointmentList] = useState([])
+    const [appointmentList, setAppointmentList] = useState(null)
+    const [loginError, setLoginError] = useState("")
     // API fetch:
     const sendUserToApi = (userName, password) => {
-        //TODO: send data to API and get appointment-list bac
-        const loginData = {
-            userName: userName,
-            password: password
-        }
-
         fetch(`${API_PATH}`, {
             headers: {
                 "Content-Type": "application/json",
             },
             method: "POST",
-            body: JSON.stringify(loginData),
+            body: JSON.stringify({
+                userName: userName,
+                password: password
+            }),
         })
             .then(result => result.json())
             .then(resultJson => {
                 console.log('result', resultJson)
-                setAppointmentList(resultJson.appointmentList)
-                resultJson.logged ? setIsLogged(true) : setIsLogged(false)
+                resultJson.error
+                    ? setLoginError(resultJson.error)
+                    : setAppointmentList(resultJson)
             })
-            .catch(err => console.log('error: ', err))
+            .catch(() => setLoginError("Erreur interne du serveur. Veuillez réessayer plus tard."))
     }
 
     return (
         <Fragment>
-            <PageTitle title="Mes rendez-vous" divider="divider-colored" />
-            <main>
-                {isLogged ? <Logged appointmentList={appointmentList} /> : <NotLogged loggingFunction={sendUserToApi} />}
+            <main className="bg-contact" style={{ height: "100vh" }}>
+                <PageTitle title="Mes rendez-vous" divider="divider-colored" />
+                {appointmentList !== null
+                    ? <Logged appointmentList={appointmentList} />
+                    : <NotLogged
+                        loggingFunction={sendUserToApi}
+                        loginError={loginError}
+                    />
+                }
             </main>
         </Fragment>
     )
