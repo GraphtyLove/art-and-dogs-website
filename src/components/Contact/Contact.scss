@@ -59,6 +59,10 @@
 .info-container{
     align-self: flex-start;
     width: 40vw;
+    ul{
+        margin: 0;
+        padding: 0;
+    }
     li{
         margin: 20px 0;
         list-style: none;
@@ -86,6 +90,7 @@
     display: flex;
     justify-content: center;
 }
+
 
 .success-message{
     background-color: #58c300;

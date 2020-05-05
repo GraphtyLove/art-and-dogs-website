@@ -7,62 +7,14 @@ import NotLogged from "./NotLogged"
 
 const API_PATH = "http://51.210.8.134:5000/"
 
-// TODO: Add a comment input for client. 
-// Route ✅
-// Input in front ✅
-// Front Fetch ✅
-// TODO: Add a date and time input for admin to format the message.
-// Input in front ❌
-// Input linked with button ❌
-// TODO: Add a send message button.
-// message ✅
-// Button in front ✅
-// TODO: Add an edit feature for client note
-// Route ✅
-// Input in front ❌
-// Front Fetch ❌
-// TODO: Delete appointment
-// Route ✅
-// Button in front ✅
-// Front Fetch ❌
-// TODO: Get the ID in a separate state
+// TODO: Add media queries for responsivity ❌
 
 
 const AppointmentAdmin = () => {
     // State
     const [appointmentList, setAppointmentList] = useState(null)
-    // TODO: TEST STATE TO REMOVE !
-    // const [appointmentList, setAppointmentList] = useState(
-    //     [
-    //         {
-    //             "_id": {
-    //                 "$oid": "5eaf52e8fcf174d716e14428"
-    //             },
-    //             "firstName": "Marie",
-    //             "lastName": "dupont",
-    //             "phone": "0493 19 99 99",
-    //             "dogName": "Rex",
-    //             "dogBreed": "berger Àlemand ",
-    //             "status": "todo",
-    //             "note": "recontacter le 12/04"
-    //         },
-    //         {
-    //             "_id": {
-    //                 "$oid": "5eaf5fe16d189253e88910ce"
-    //             },
-    //             "firstName": "q",
-    //             "lastName": "q",
-    //             "phone": "q",
-    //             "dogName": "q",
-    //             "dogBreed": "q",
-    //             "status": "waiting",
-    //             "note": "gentille dame"
-    //         }
-    //     ]
-    // )
-
-
     const [loginError, setLoginError] = useState("")
+
     // API fetch:
     const sendUserToApi = (userName, password) => {
         fetch(API_PATH + "appointment-admin", {
@@ -93,9 +45,12 @@ const AppointmentAdmin = () => {
     return (
         <Fragment>
             <main className="bg-contact flex-center" style={{ minHeight: "100vh" }}>
-                <PageTitle title="Mes rendez-vous" divider="divider-colored" />
+                <PageTitle title="Mes rendez-vous" divider="divider-black" />
                 {appointmentList !== null
-                    ? <Logged appointmentList={appointmentList} />
+                    ? <Logged
+                        appointmentList={appointmentList}
+                        fetchFunction={sendUserToApi}
+                    />
                     : <NotLogged
                         loggingFunction={sendUserToApi}
                         loginError={loginError}

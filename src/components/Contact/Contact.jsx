@@ -91,7 +91,7 @@ const Contact = () => {
                         </section>
 
                         <section>
-                            <h3>Téléphone</h3>
+                            <h3>Téléphone portable</h3>
                             <input
                                 type="text"
                                 placeholder="04 91 00 00 00"
@@ -122,7 +122,7 @@ const Contact = () => {
                             <input
                                 type="text"
                                 placeholder="Je ne suis disponible que..."
-                                value={dogBreed}
+                                value={remarque}
                                 onChange={e => setRemarque(e.target.value)}
                             />
                         </section>

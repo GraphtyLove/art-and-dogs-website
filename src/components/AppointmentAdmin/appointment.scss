@@ -1,6 +1,7 @@
 .switcherContainer {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .switchButton{
@@ -24,8 +25,8 @@
 .appointmentCard {
     background: white;
     border-radius: 19px;
-    min-width: 30%;
-    height: 300px;
+    min-width: 50%;
+    height: 400px;
     margin: 20px 0;
     header{
         background: #F2F2F2;
@@ -60,6 +61,7 @@
             font-weight: bold;
             padding: 5px 30px;
             border-radius: 20px;
+            color: white;
         }
     }
     li{
@@ -67,6 +69,7 @@
         margin: 0;
         display: flex;
         justify-content: center;
+        height: 25%;
     }
     .cardSectionNames{
         ul{
@@ -77,24 +80,48 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            padding: 10px 0;
         }
     }
     .cardSectionContent{
         ul{
             margin: 0;
-            padding: 0;
+            padding: 10px 0;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: flex-start;
         }
+        .note{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            width: 100%;
+            .noteContent{
+                width: 80%;
+                overflow-wrap: break-word;
+                padding: 0 5px;
+            }
+            input{
+                height: 20px;
+            }
+            button{
+                margin-left: auto;
+                margin-right: 10px;
+                height: 30px;
+                background: none;
+            }
+        }
         li{
             display: flex;
             flex-direction: column;
+            height: 25%;
+            justify-content: start;
+
         }
         p{
-            margin: 3px 0;
+            margin: 0 3px 0 0;
         }
     }
 }
@@ -105,16 +132,19 @@
 
 .redBg{
     background: #D00000;
-    color: white;
 }
 .greenBg{
     background: #5ccb5c;
-    color: white;
 }
 
 .blueBg{
     background: #00a2f7;
-    color: white;
+}
+.empty{
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
 }
 
 .statusBubble{
@@ -123,4 +153,19 @@
     width: 15px;
     border-radius: 50%;
     margin-left: 5px;
+}
+
+.appointmentTime{
+    width: 30px;
+    height: 10px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 1060px){
+    .appointmentCard{
+        width: 95%;
+    }
+    .switcherContainer{
+        max-width: 95%;
+    }
 }
