@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import getUserNameAndPasswordFromCookies from '../../utils/cookie'
 import MaterialIcon from 'material-icons-react'
 
-const API_URL = "http://51.210.8.134:5000/"
+const API_URL = "http://51.210.8.134/"
 
 
 const AppointmentItem = props => {
@@ -15,7 +15,7 @@ const AppointmentItem = props => {
     const [appointmentMinute, setAppointmentMinute] = useState("")
 
 
-    const SMS_STRING = `sms://${props.phone}?&body=Salon Art and Dogs bonjour, je vous contacte suite à votre demande de rendez-vous effectuée le ${props.date} Je peux vous proposer le: ${appointmentDay}/${appointmentMonth} à ${appointmentHour}h${appointmentMinute}. Merci de me confirmer ou non votre présence. Une bonne journée.`
+    const SMS_STRING = `sms://${props.phone}?&body=Salon Art and Dogs bonjour, je vous contacte suite à votre demande de rendez-vous effectuée le ${props.date}. Je peux vous proposer le: ${appointmentDay}/${appointmentMonth} à ${appointmentHour}h${appointmentMinute}. Merci de me confirmer ou non votre présence. Une bonne journée.`
     const CALL_STRING = `tel:${props.phone}`
 
     let appointmentData = {

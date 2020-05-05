@@ -14,7 +14,7 @@ import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
 // Locate the php API to will send the mail
-const API_PATH = "http://51.210.8.134:5000/"
+const API_PATH = "http://51.210.8.134/"
 
 const Contact = () => {
     // STATE :

@@ -5,7 +5,7 @@ import PageTitle from "../PageTitle/PageTitle"
 import Logged from "./Logged"
 import NotLogged from "./NotLogged"
 
-const API_PATH = "http://51.210.8.134:5000/"
+const API_PATH = "http://51.210.8.134/"
 
 // TODO: Add media queries for responsivity ❌
 
