@@ -54,7 +54,6 @@ export default class NavbarSmall extends Component {
                             <li id={this.state.activePage === 'gallery' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('gallery')} to='/Gallery' > Galerie </Link> </li>
                             <li id={this.state.activePage === 'contact' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('contact')} to='/contact' > Contact </Link> </li>
                             <li id={this.state.activePage === 'hours' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('hours')} to='/hours' > Nos heures </Link> </li>
-                            <li id={this.state.activePage === 'data-policy' && 'active'} > <Link onClick={() => this.closeMenu('data-policy')} to='/data-policy' >Utilisation des donnèes</Link> </li>
                         </ul>
                     </Menu>
                 </nav>

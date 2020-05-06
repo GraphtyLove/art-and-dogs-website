@@ -25,6 +25,7 @@ const Contact = () => {
     const [dogName, setDogName] = useState("")
     const [dogBreed, setDogBreed] = useState("")
     const [remarque, setRemarque] = useState("")
+    const [isDataPolicyAccepted, setIsDataPolicyAccepted] = useState(false)
     const [formSuccessMessage, setFormSuccessMessage] = useState("")
     const [formErrormessage, setFormErrormessage] = useState("")
 
@@ -39,7 +40,8 @@ const Contact = () => {
             phone: phone,
             dogName: dogName,
             dogBreed: dogBreed,
-            remarque: remarque
+            remarque: remarque,
+            isDataPolicyAccepted: isDataPolicyAccepted
         }
 
         fetch(API_PATH + "appointment-client", {
@@ -128,8 +130,8 @@ const Contact = () => {
                             />
                         </section>
                         <section>
-                            <input type="checkbox" />
-                            J'ai lu et accepter <Link to='/data-policy'>la politique d'utilisation des données personnelles d'Art and Dogs </Link>
+                            <input value={isDataPolicyAccepted} onChange={e => setIsDataPolicyAccepted(e.target.checked)} type="checkbox" style={{ margin: "0 10px", width: "20px", height: "20px" }} />
+                            J'ai lu et accepter la <Link to='/data-policy'>politique de confidentialité d'Art and Dogs </Link>
                         </section>
 
                         <section>

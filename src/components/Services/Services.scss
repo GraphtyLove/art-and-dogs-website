@@ -3,7 +3,6 @@
 .services-container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
     .container-sub {
         width: 50%;
         display: flex;
@@ -20,7 +19,7 @@
         background-color: $GOLD;
         position: absolute;
         width: 50vw;
-        height: 100vh;
+        height: 80vh;
         z-index: -1;
 
     }

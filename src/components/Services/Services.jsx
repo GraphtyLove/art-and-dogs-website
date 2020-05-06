@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 
 // Styles
 import './Services.scss'
@@ -25,7 +25,7 @@ export default class Services extends Component {
 
                     <div className='general-container'>
                         <section className='container-sub container-sub-left flex-center'>
-                             <div className='box-center'>
+                            <div className='box-center'>
                                 <article className='article-left'>
                                     <div className='services-txt'>
                                         <h3>Bains</h3>
@@ -45,7 +45,7 @@ export default class Services extends Component {
                                 </article>
                             </div>
                         </section>
-                        <img className='service-Dog' src={serviceDog} alt="chien"/>
+                        <img className='service-Dog' src={serviceDog} alt="chien" />
                         <section className='container-sub container-sub-right flex-center'>
                             <div className='box-center'>
                                 <article className='article-right'>
@@ -70,7 +70,6 @@ export default class Services extends Component {
                         </section>
                     </div>
                 </main>
-
             </Fragment>
         );
     }

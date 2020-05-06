@@ -5,7 +5,9 @@
 body{
   font-family: 'Roboto', sans-serif;
   background-color: white;
-  min-height: 99vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 ,h2, h3, h4, h5, h6{
@@ -53,3 +55,11 @@ button{
   border: 0;
 }
 
+.end-page{
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  height: 50px;
+}

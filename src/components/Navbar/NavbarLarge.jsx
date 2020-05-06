@@ -41,7 +41,6 @@ export default class NavbarLarge extends Component {
                         <li id={this.state.activePage === 'gallery' && 'active'} > <Link onClick={() => this.updateActivePage('gallery')} to='/Gallery' > Galerie </Link> </li>
                         <li id={this.state.activePage === 'contact' && 'active'} > <Link onClick={() => this.updateActivePage('contact')} to='/contact' > Contact </Link> </li>
                         <li id={this.state.activePage === 'hours' && 'active'} > <Link onClick={() => this.updateActivePage('hours')} to='/hours' > Nos heures </Link> </li>
-                        <li id={this.state.activePage === 'data-policy' && 'active'} > <Link onClick={() => this.updateActivePage('data-policy')} to='/data-policy' >Utilisation des donnèes</Link> </li>
                     </ul>
                 </nav>
                 <Route exact path='/' component={Home} />
