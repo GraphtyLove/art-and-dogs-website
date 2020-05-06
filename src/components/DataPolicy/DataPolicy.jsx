@@ -30,13 +30,13 @@ const DataPolicy = () => {
                 </p>
                 <h2>Informations légale sur Art and Dogs</h2>
                 <p>
-                    Art and Dogs est enrigistré dans le moniteur Belge en tant que PERSONNE PHYSIQUE
-                    au nom de DANIÈLE SNIJERS avec le NUMERO D'ENTREPRISE: 0612.727.818
+                    Art and Dogs est enregistré dans le moniteur Belge en tant que PERSONNE PHYSIQUE
+                    au nom de DANIÈLE SNIJERS avec le NUMÉRO D'ENTREPRISE: 0612.727.818
                     SITUÈ: Avenue Eugène Mascaux 781 6001 Charleroi depuis le 2 janvier 2014.
                 </p>
-                <h2>Information supplèmentaires</h2>
+                <h2>Information supplémentaires</h2>
                 <p>
-                    Pour toute demande d'informations simplémentaire veuillez vous container par mail
+                    Pour toute demande d'informations supplémentaire veuillez vous container par mail
                     à l'adresse mail danielesnijers@gmail.com ou par tèlèphone au numéro: 0496 86 86 87 .
                 </p>
             </main>
