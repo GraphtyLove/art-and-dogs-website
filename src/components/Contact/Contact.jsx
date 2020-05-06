@@ -1,4 +1,5 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment } from "react"
+import { Link } from 'react-router-dom'
 
 // Styles
 import "./Contact.scss"
@@ -126,6 +127,11 @@ const Contact = () => {
                                 onChange={e => setRemarque(e.target.value)}
                             />
                         </section>
+                        <section>
+                            <input type="checkbox" />
+                            J'ai lu et accepter <Link to='/data-policy'>la politique d'utilisation des données personnelles d'Art and Dogs </Link>
+                        </section>
+
                         <section>
                             <button onClick={handleFormSubmit}>
                                 Envoyer

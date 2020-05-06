@@ -1,0 +1,11 @@
+.data-container{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    p{
+        text-align: justify;
+    }
+}

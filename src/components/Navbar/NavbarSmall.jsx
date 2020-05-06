@@ -14,6 +14,7 @@ import GalleryDog from '../GalleryDog/GalleryDog'
 import Contact from '../Contact/Contact'
 import Hours from '../Hours/Hours'
 import AppointmentAdmin from '../AppointmentAdmin/AppointmentAdmin'
+import DataPolicy from '../DataPolicy/DataPolicy'
 
 
 export default class NavbarSmall extends Component {
@@ -53,6 +54,7 @@ export default class NavbarSmall extends Component {
                             <li id={this.state.activePage === 'gallery' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('gallery')} to='/Gallery' > Galerie </Link> </li>
                             <li id={this.state.activePage === 'contact' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('contact')} to='/contact' > Contact </Link> </li>
                             <li id={this.state.activePage === 'hours' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('hours')} to='/hours' > Nos heures </Link> </li>
+                            <li id={this.state.activePage === 'data' && 'active'} > <Link onClick={() => this.updateActivePage('data')} to='/data-policy' >Utilisation des donnèes</Link> </li>
                         </ul>
                     </Menu>
                 </nav>
@@ -64,6 +66,7 @@ export default class NavbarSmall extends Component {
                 <Route path='/contact' component={Contact} />
                 <Route exact path='/hours' component={Hours} />
                 <Route exact path='/rdv-admin' component={AppointmentAdmin} />
+                <Route exact path='/data-policy' component={DataPolicy} />
             </Router>
         );
     }
