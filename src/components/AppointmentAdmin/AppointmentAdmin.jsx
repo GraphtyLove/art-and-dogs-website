@@ -34,9 +34,8 @@ const AppointmentAdmin = () => {
                     setLoginError(resultJson.error)
                 } else {
                     setAppointmentList(resultJson)
-                    document.cookie = `username=${userName};`
-                    document.cookie = `password=${password}`
-                    console.log("cookies: ", document.cookie)
+                    window.localStorage.setItem('aadLogin', JSON.stringify({ userName: userName, password: password }))
+                    console.log("Storage: ", JSON.parse(window.localStorage.getItem('aadLogin')))
                 }
             })
             .catch(() => setLoginError("Erreur interne du serveur. Veuillez réessayer plus tard."))

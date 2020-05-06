@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import getUserNameAndPasswordFromCookies from '../../utils/cookie'
 
 const inputClass = {
     marginBottom: "20px"
@@ -13,11 +12,12 @@ const NotLogged = props => {
 
     // On mount:
     useEffect(() => {
-        let userData = getUserNameAndPasswordFromCookies()
-        if (userData.userName && userData.userName.length > 0 && userData.password && userData.password.length > 0) {
+        let userData = JSON.parse(window.localStorage.getItem('aadLogin'))
+        if (userData && userData.userName && userData.userName.length > 0 && userData.password && userData.password.length > 0) {
             console.log('connecting...')
             props.loggingFunction(userData.userName, userData.password)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     // Handle changes:

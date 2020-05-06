@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import getUserNameAndPasswordFromCookies from '../../utils/cookie'
 import MaterialIcon from 'material-icons-react'
 
 const API_URL = "http://51.210.8.134/"
@@ -42,7 +41,7 @@ const AppointmentItem = props => {
         })
             .then(result => result.json())
             .then(resultJson => {
-                const userData = getUserNameAndPasswordFromCookies()
+                const userData = JSON.parse(window.localStorage.getItem('aadLogin'))
                 resultJson.success && props.fetchFunction(userData.userName, userData.password)
             })
             .catch(err => console.log('error: ', err))
@@ -58,7 +57,7 @@ const AppointmentItem = props => {
             .then(result => result.json())
             .then(resultJson => {
                 console.log("send")
-                const userData = getUserNameAndPasswordFromCookies()
+                const userData = JSON.parse(window.localStorage.getItem('aadLogin'))
                 resultJson.success && props.fetchFunction(userData.userName, userData.password)
             })
             .catch(err => console.log('error: ', err))
@@ -73,7 +72,7 @@ const AppointmentItem = props => {
         })
             .then(result => result.json())
             .then(resultJson => {
-                const userData = getUserNameAndPasswordFromCookies()
+                const userData = JSON.parse(window.localStorage.getItem('aadLogin'))
                 resultJson.success && props.fetchFunction(userData.userName, userData.password)
             })
             .catch(err => console.log('error: ', err))
