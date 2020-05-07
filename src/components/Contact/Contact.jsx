@@ -131,7 +131,7 @@ const Contact = () => {
                         </section>
                         <section className="checkbox-container">
                             <input className="checkbox" value={isDataPolicyAccepted} onChange={e => setIsDataPolicyAccepted(e.target.checked)} type="checkbox" style={{ marginRight: "10px", width: "20px", height: "20px" }} />
-                            <span>J'ai lu et accepter la <Link to='/data-policy'>politique de confidentialité d'Art and Dogs </Link></span>
+                            <span>J'ai lu et accepté la <Link to='/data-policy'>politique de confidentialité d'Art and Dogs </Link></span>
                         </section>
 
                         <section>
