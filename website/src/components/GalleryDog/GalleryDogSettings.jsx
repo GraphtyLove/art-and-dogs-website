@@ -12,12 +12,6 @@ import photo11 from "../../assets/img/Gallery/Gallery-11.jpg";
 import photo12 from "../../assets/img/Gallery/Gallery-12.jpg";
 import photo13 from "../../assets/img/Gallery/Gallery-13.jpg";
 import photo14 from "../../assets/img/Gallery/Gallery-14.jpg";
-import photo15 from "../../assets/img/Gallery/Gallery-15.jpg";
-import photo16 from "../../assets/img/Gallery/Gallery-16.jpg";
-import photo17 from "../../assets/img/Gallery/Gallery-17.jpg";
-import photo18 from "../../assets/img/Gallery/Gallery-18.jpg";
-import photo19 from "../../assets/img/Gallery/Gallery-19.jpg";
-import photo20 from "../../assets/img/Gallery/Gallery-20.jpg";
 
 const photos = [
   {
@@ -77,30 +71,6 @@ const photos = [
     src: photo14,
     thumbnail: photo14,
   },
-  {
-    src: photo15,
-    thumbnail: photo15,
-  },
-  {
-    src: photo16,
-    thumbnail: photo16,
-  },
-  {
-    src: photo17,
-    thumbnail: photo17,
-  },
-  {
-    src: photo18,
-    thumbnail: photo18,
-  },
-  {
-    src: photo19,
-    thumbnail: photo19,
-  },
-  {
-    src: photo20,
-    thumbnail: photo20,
-  },
-];
+]
 
 export default photos
