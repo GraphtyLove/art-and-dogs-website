@@ -19,7 +19,7 @@ export default class Tarif extends Component {
                     <section className='tarif-container' id='grooming'>
                         <header className='header-table'>
                             <h3>Toilettage</h3>
-                            <p>Le bain est obligatoire - le prix peut varrier selon l'état de l'animal</p>
+                            <p>Le bain est obligatoire - le prix peut varier selon l'état de l'animal</p>
                         </header>
                         <ul>
                             <li className="breed">
