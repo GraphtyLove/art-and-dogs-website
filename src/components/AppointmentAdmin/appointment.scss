@@ -57,11 +57,19 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        a{
+            width: 30%;
+        }
         button{
             font-weight: bold;
             padding: 5px 30px;
             border-radius: 20px;
             color: white;
+            width: 30%;
+            height: 40px;
+        }
+        .sms{
+            width: 100%;
         }
     }
     li{
@@ -164,6 +172,23 @@
 @media screen and (max-width: 1060px){
     .appointmentCard{
         width: 95%;
+        height: 560px;
+        footer{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            button{
+                width: 60%;
+                margin: 3px 0;
+                height: 23.5px;
+            }
+            a{
+                width: 60%;
+                height: 23.5px;
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
     .switcherContainer{
         max-width: 95%;

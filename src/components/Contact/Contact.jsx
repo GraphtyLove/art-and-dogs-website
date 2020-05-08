@@ -14,8 +14,9 @@ import facebook from "../../assets/img/facebook.png"
 import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
-// Locate the php API to will send the mail
+// Constants
 const API_PATH = "http://51.210.8.134/"
+
 
 const Contact = () => {
     // STATE :
@@ -29,8 +30,9 @@ const Contact = () => {
     const [formSuccessMessage, setFormSuccessMessage] = useState("")
     const [formErrormessage, setFormErrormessage] = useState("")
 
+    let isSubmitAvailable = true
 
-    // Send name, email and message to the PHP API
+    // Send from data to the API
     const handleFormSubmit = event => {
         event.preventDefault()
 
@@ -57,6 +59,8 @@ const Contact = () => {
                 if (resultJson.success) {
                     setFormSuccessMessage("Votre rendez-vous à bien été envoyé. Nous vous recontactons dans les plus brefs délais.")
                     setFormErrormessage("")
+                    isSubmitAvailable = false
+                    setTimeout(isSubmitAvailable, 3000);
                 } else {
                     setFormErrormessage(resultJson.error)
                 }
@@ -80,6 +84,9 @@ const Contact = () => {
                                 placeholder="Dupont"
                                 value={lastName}
                                 onChange={e => setLastName(e.target.value)}
+                                minLength={2}
+                                maxLength={20}
+                                required
                             />
                         </section>
 
@@ -90,6 +97,9 @@ const Contact = () => {
                                 placeholder="Marie"
                                 value={firstName}
                                 onChange={e => setFirstName(e.target.value)}
+                                minLength={2}
+                                maxLength={20}
+                                required
                             />
                         </section>
 
@@ -100,6 +110,9 @@ const Contact = () => {
                                 placeholder="04 91 00 00 00"
                                 value={phone}
                                 onChange={e => setPhone(e.target.value)}
+                                minLength={10}
+                                maxLength={12}
+                                required
                             />
                         </section>
                         <section>
@@ -109,6 +122,9 @@ const Contact = () => {
                                 placeholder="Rex"
                                 value={dogName}
                                 onChange={e => setDogName(e.target.value)}
+                                minLength={2}
+                                maxLength={20}
+                                required
                             />
                         </section>
                         <section>
@@ -118,6 +134,9 @@ const Contact = () => {
                                 placeholder="Caniche"
                                 value={dogBreed}
                                 onChange={e => setDogBreed(e.target.value)}
+                                minLength={2}
+                                maxLength={20}
+                                required
                             />
                         </section>
                         <section>
@@ -127,15 +146,27 @@ const Contact = () => {
                                 placeholder="Je ne suis disponible que..."
                                 value={remarque}
                                 onChange={e => setRemarque(e.target.value)}
+                                minLength={2}
+                                maxLength={125}
                             />
                         </section>
                         <section className="checkbox-container">
-                            <input className="checkbox" value={isDataPolicyAccepted} onChange={e => setIsDataPolicyAccepted(e.target.checked)} type="checkbox" style={{ marginRight: "10px", width: "20px", height: "20px" }} />
+                            <input
+                                className="checkbox"
+                                value={isDataPolicyAccepted}
+                                onChange={e => setIsDataPolicyAccepted(e.target.checked)}
+                                type="checkbox"
+                                style={{ marginRight: "10px", width: "20px", height: "20px" }}
+                                required
+                            />
                             <span>J'ai lu et accepté la <Link to='/data-policy'>politique de confidentialité d'Art and Dogs </Link></span>
                         </section>
 
                         <section>
-                            <button onClick={handleFormSubmit}>
+                            <button
+                                onClick={handleFormSubmit}
+                                disabled={formSuccessMessage}
+                            >
                                 Envoyer
                             </button>
                         </section>

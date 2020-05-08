@@ -156,7 +156,7 @@ const AppointmentItem = props => {
                     SUPPRIMER
                 </button>
                 <a href={SMS_STRING}>
-                    <button className="blueBg">SMS</button>
+                    <button className="blueBg sms">SMS</button>
                 </a>
                 <button className="greenBg" onClick={() => appointmentStatusInvert(appointmentData)}>
                     {props.switcher === 'todo' && "EN ATTENTE"}
