@@ -37,12 +37,12 @@ const Contact = () => {
         event.preventDefault()
 
         const allStates = {
-            firstName: firstName,
-            lastName: lastName,
-            phone: phone,
-            dogName: dogName,
-            dogBreed: dogBreed,
-            remarque: remarque,
+            firstName: firstName.trim(),
+            lastName: lastName.trim(),
+            phone: phone.trim(),
+            dogName: dogName.trim(),
+            dogBreed: dogBreed.trim(),
+            remarque: remarque.trim(),
             isDataPolicyAccepted: isDataPolicyAccepted
         }
 

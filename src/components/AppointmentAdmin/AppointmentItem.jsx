@@ -14,6 +14,30 @@ const AppointmentItem = props => {
     const [appointmentMinute, setAppointmentMinute] = useState("")
 
 
+    const handleChangeInput = (e, inputName) => {
+        const maxInputValue = 2
+        const value = e.target.value
+        let nextInput = ''
+
+        if (inputName === 'appointmentDay') {
+            setAppointmentDay(value)
+            nextInput = 'appointmentMonth'
+        } else if (inputName === "appointmentMonth") {
+            setAppointmentMonth(value)
+            nextInput = 'appointmentHour'
+        } else if (inputName === "appointmentHour") {
+            setAppointmentHour(value)
+            nextInput = 'appointmentMinute'
+        } else if (inputName === "appointmentMinute") {
+            setAppointmentMinute(value)
+            nextInput = null
+        }
+
+        if (value.length >= maxInputValue && nextInput) {
+            document.getElementById(nextInput).focus()
+        }
+    }
+
     const SMS_STRING = `sms://${props.phone}?&body=Salon Art and Dogs bonjour, je vous contacte suite à votre demande de rendez-vous effectuée le ${props.date}. Je peux vous proposer le: ${appointmentDay}/${appointmentMonth} à ${appointmentHour}h${appointmentMinute}. Merci de me confirmer ou non votre présence. Une bonne journée.`
     const CALL_STRING = `tel:${props.phone}`
 
@@ -140,13 +164,14 @@ const AppointmentItem = props => {
                                 : <button onClick={() => setIsEditing(!isEditing)}> <MaterialIcon icon="edit" color="#00a2f7" /></button>}
                         </li>
                         <li style={{ flexDirection: 'row', width: '100%' }} >
-                            <input value={appointmentDay} onChange={e => setAppointmentDay(e.target.value)} className="appointmentTime" type="number" />
+
+                            <input pattern="[0-3][0-9]+" selectTextOnFocus={true} id="appointmentDay" value={appointmentDay} maxLength="2" onChange={e => handleChangeInput(e, 'appointmentDay')} className="appointmentTime" type="text" />
                             /
-                            <input value={appointmentMonth} onChange={e => setAppointmentMonth(e.target.value)} className="appointmentTime" type="number" />
+                            <input pattern="[0-1][0-9]" selectTextOnFocus={true} id="appointmentMonth" value={appointmentMonth} maxLength="2" onChange={e => handleChangeInput(e, 'appointmentMonth')} className="appointmentTime" type="text" />
                             à
-                            <input value={appointmentHour} onChange={e => setAppointmentHour(e.target.value)} className="appointmentTime" type="number" />
-                            :
-                            <input value={appointmentMinute} onChange={e => setAppointmentMinute(e.target.value)} className="appointmentTime" type="number" />
+                            <input pattern="[0-2][0-9]" selectTextOnFocus={true} id="appointmentHour" value={appointmentHour} maxLength="2" onChange={e => handleChangeInput(e, 'appointmentHour')} className="appointmentTime" type="text" />
+                            h
+                            <input pattern="[0-5][0-9]" selectTextOnFocus={true} id="appointmentMinute" value={appointmentMinute} maxLength="2" onChange={e => handleChangeInput(e, 'appointmentMinute')} className="appointmentTime" type="text" />
                         </li>
                     </ul>
                 </section>

@@ -5,9 +5,8 @@ import PageTitle from "../PageTitle/PageTitle"
 import Logged from "./Logged"
 import NotLogged from "./NotLogged"
 
+// Constants:
 const API_PATH = "http://51.210.8.134/"
-
-// TODO: Add media queries for responsivity ❌
 
 
 const AppointmentAdmin = () => {
@@ -23,8 +22,8 @@ const AppointmentAdmin = () => {
             },
             method: "POST",
             body: JSON.stringify({
-                userName: userName,
-                password: password
+                userName: userName.trim(),
+                password: password.trim()
             }),
         })
             .then(result => result.json())
@@ -34,7 +33,7 @@ const AppointmentAdmin = () => {
                     setLoginError(resultJson.error)
                 } else {
                     setAppointmentList(resultJson)
-                    window.localStorage.setItem('aadLogin', JSON.stringify({ userName: userName, password: password }))
+                    window.localStorage.setItem('aadLogin', JSON.stringify({ userName: userName.trim(), password: password.trim() }))
                     console.log("Storage: ", JSON.parse(window.localStorage.getItem('aadLogin')))
                 }
             })
