@@ -12,6 +12,7 @@ import photo11 from "../../assets/img/Gallery/Gallery-11.jpg";
 import photo12 from "../../assets/img/Gallery/Gallery-12.jpg";
 import photo13 from "../../assets/img/Gallery/Gallery-13.jpg";
 import photo14 from "../../assets/img/Gallery/Gallery-14.jpg";
+import photo15 from "../../assets/img/Gallery/Gallery-15.jpg";
 
 const photos = [
   {
@@ -70,6 +71,10 @@ const photos = [
   {
     src: photo14,
     thumbnail: photo14,
+  },
+  {
+    src: photo15,
+    thumbnail: photo15,
   },
 ]
 
