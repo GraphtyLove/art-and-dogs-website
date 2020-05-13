@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from "react"
 import { Link } from 'react-router-dom'
-import firebase from 'firebase'
 import formatDataForDb from '../../utils/formFormatter'
 
 // Styles
@@ -17,9 +16,7 @@ import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
 // Firebase
-import firebaseConfig from '../../utils/firebase'
-firebase.initializeApp(firebaseConfig)
-const db = firebase.database().ref('appointments')
+import firebase from '../../utils/firebase'
 
 const Contact = () => {
     // STATE :
@@ -34,19 +31,22 @@ const Contact = () => {
     const [formErrormessage, setFormErrormessage] = useState("")
 
     // Send from data to the API
-    const handleFormSubmit = event => {
+    const sendDataToDb = event => {
         event.preventDefault()
+        // * --- Firebase SetUp --- *
+        const db = firebase.firestore()
+        
         // format and sanitize data
         const appointmentData = formatDataForDb(firstName, lastName, phone, dogName, dogBreed, remarque, isDataPolicyAccepted)
-
+        
+        // Set error state if there is
         appointmentData && appointmentData.error && setFormErrormessage(appointmentData.error)
         
         if (appointmentData && appointmentData.formatted){
-            db.push(appointmentData, err => {
-                err 
-                ? setFormErrormessage('erreur interne du serveur. veuillez réessayer plus tard')
-                : setFormSuccessMessage('Votre message à bien été envoyé. Nous vous répondrons dans les 48H.')
-            })
+            // Send data to DB
+            db.collection('appointments').add(appointmentData)
+                .then(() => setFormSuccessMessage('Votre demande de rendez-vous à bien été envoyée. Nous vous répondrons dans les 48h!'))
+                .catch(() => formErrormessage('Erreur interne du serveur. Veuillez réessayer plus tard.'))
         }
     }
 
@@ -146,7 +146,7 @@ const Contact = () => {
 
                         <section>
                             <button
-                                onClick={handleFormSubmit}
+                                onClick={sendDataToDb}
                                 disabled={formSuccessMessage}
                             >
                                 Envoyer
