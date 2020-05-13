@@ -5,6 +5,7 @@ import './App.scss';
 
 // Components
 import Navbar from './components/Navbar/Navbar.jsx'
+// import Test from './components/Test.jsx'
 
 
 export default class App extends Component {
@@ -12,6 +13,7 @@ export default class App extends Component {
         return (
             <Fragment>
                 <Navbar />
+                {/* <Test /> */}
             </Fragment>
         );
     }

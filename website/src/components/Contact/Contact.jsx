@@ -1,5 +1,7 @@
 import React, { useState, Fragment } from "react"
 import { Link } from 'react-router-dom'
+import firebase from 'firebase'
+import formatDataForDb from '../../utils/formFormatter'
 
 // Styles
 import "./Contact.scss"
@@ -14,9 +16,10 @@ import facebook from "../../assets/img/facebook.png"
 import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
-// Constants
-const API_PATH = "http://51.210.8.134/"
-
+// Firebase
+import firebaseConfig from '../../utils/firebase'
+firebase.initializeApp(firebaseConfig)
+const db = firebase.database().ref('appointments')
 
 const Contact = () => {
     // STATE :
@@ -30,42 +33,21 @@ const Contact = () => {
     const [formSuccessMessage, setFormSuccessMessage] = useState("")
     const [formErrormessage, setFormErrormessage] = useState("")
 
-    let isSubmitAvailable = true
-
     // Send from data to the API
     const handleFormSubmit = event => {
         event.preventDefault()
+        // format and sanitize data
+        const appointmentData = formatDataForDb(firstName, lastName, phone, dogName, dogBreed, remarque, isDataPolicyAccepted)
 
-        const allStates = {
-            firstName: firstName.trim(),
-            lastName: lastName.trim(),
-            phone: phone.trim(),
-            dogName: dogName.trim(),
-            dogBreed: dogBreed.trim(),
-            remarque: remarque.trim(),
-            isDataPolicyAccepted: isDataPolicyAccepted
-        }
-
-        fetch(API_PATH + "appointment-client", {
-            headers: {
-                "Content-Type": "application/json",
-            },
-            method: "POST",
-            body: JSON.stringify(allStates),
-        })
-            .then(result => result.json())
-            .then(resultJson => {
-                console.log('result', resultJson)
-                if (resultJson.success) {
-                    setFormSuccessMessage("Votre rendez-vous à bien été envoyé. Nous vous recontactons dans les plus brefs délais.")
-                    setFormErrormessage("")
-                    isSubmitAvailable = false
-                    setTimeout(isSubmitAvailable, 3000);
-                } else {
-                    setFormErrormessage(resultJson.error)
-                }
+        appointmentData && appointmentData.error && setFormErrormessage(appointmentData.error)
+        
+        if (appointmentData && appointmentData.formatted){
+            db.push(appointmentData, err => {
+                err 
+                ? setFormErrormessage('erreur interne du serveur. veuillez réessayer plus tard')
+                : setFormSuccessMessage('Votre message à bien été envoyé. Nous vous répondrons dans les 48H.')
             })
-            .catch(err => console.log('error: ', err))
+        }
     }
 
     return (
@@ -147,7 +129,7 @@ const Contact = () => {
                                 value={remarque}
                                 onChange={e => setRemarque(e.target.value)}
                                 minLength={2}
-                                maxLength={125}
+                                maxLength={130}
                             />
                         </section>
                         <section className="checkbox-container">
