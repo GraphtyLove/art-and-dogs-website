@@ -38,7 +38,7 @@ const formatDataForDb = (firstName, lastName, phone, dogName, dogBreed, remarque
             dogName: dogName.trim().charAt(0).toUpperCase() + dogName.trim().toLocaleLowerCase().slice(1),
             dogBreed: dogBreed.trim().charAt(0).toUpperCase() + dogBreed.trim().toLocaleLowerCase().slice(1),
             remarque: remarque.trim(),
-            formDate: String(date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear()),
+            formDate: String(date.getDate() + '/' + (date.getMonth() +1)  + '/' + date.getFullYear()),
             isDataPolicyAccepted: isDataPolicyAccepted,
             appointmentProposal: '',
             status: 'todo',
