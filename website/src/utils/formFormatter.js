@@ -43,7 +43,6 @@ const formatDataForDb = (firstName, lastName, phone, dogName, dogBreed, remarque
             appointmentProposal: '',
             status: 'todo',
             formatted: true,
-            appointmentDateTime: '',
         }
         return appointmentData
 
