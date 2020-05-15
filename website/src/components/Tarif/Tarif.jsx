@@ -157,11 +157,11 @@ export default class Tarif extends Component {
                             <li className="breed">
                                 <div className="breed-name table-name">Terreneuve</div>
                                 <div className="price">90€</div>
-                            </li>a
+                            </li>
                             <li className="breed">
                                 <div className="breed-name table-name">Tervueren</div>
                                 <div className="price">60€</div>
-                            </li>a
+                            </li>
                             <li className="breed">
                                 <div className="breed-name table-name">Westie</div>
                                 <div className="price">55€</div>

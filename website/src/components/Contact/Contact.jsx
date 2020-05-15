@@ -138,7 +138,6 @@ const Contact = () => {
                                 value={isDataPolicyAccepted}
                                 onChange={e => setIsDataPolicyAccepted(e.target.checked)}
                                 type="checkbox"
-                                style={{ marginRight: "10px", width: "20px", height: "20px" }}
                                 required
                             />
                             <span>J'ai lu et accepté la <Link to='/data-policy'>politique de confidentialité d'Art and Dogs </Link></span>
