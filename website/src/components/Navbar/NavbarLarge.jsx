@@ -12,7 +12,6 @@ import Team from '../Team/Team'
 import GalleryDog from '../GalleryDog/GalleryDog'
 import Contact from '../Contact/Contact'
 import Hours from '../Hours/Hours'
-import AppointmentAdmin from '../AppointmentAdmin/AppointmentAdmin'
 import DataPolicy from '../DataPolicy/DataPolicy'
 
 
@@ -50,7 +49,6 @@ export default class NavbarLarge extends Component {
                 <Route path='/Gallery' component={GalleryDog} />
                 <Route path='/contact' component={Contact} />
                 <Route exact path='/hours' component={Hours} />
-                <Route exact path='/rdv-admin' component={AppointmentAdmin} />
                 <Route exact path='/data-policy' component={DataPolicy} />
             </Router>
         );
