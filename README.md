@@ -16,8 +16,8 @@ Made with ❤️ by [Cassandra Caestecker](https://www.linkedin.com/in/cassandra
 ![Screenshot of the website](screenshot-site.png)
 
 ## Communication with Back-end
-To communicate with back-end I use the fetch function that point to an API.
-Use you own API to make the contact from run.
+The contact form is linked to a Firebase DB.
+Use you own Firebase key to make it run.
 
 
 
