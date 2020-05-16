@@ -9,8 +9,8 @@ Website for the groomer Daniele Snijers, to introduce her business and allow cli
 Made in react.
 
 ## Who?
-
-Made with ❤️ by [Cassandra Caestecker](https://www.linkedin.com/in/cassandra-caestecker/) and [Maxim Berge](https://www.linkedin.com/in/maxim-berge-94b486179/).
+- Programmed with ❤️ by [Maxim Berge](https://www.linkedin.com/in/maxim-berge-94b486179/)
+- Designed with ❤️ by [Cassandra Caestecker](https://www.linkedin.com/in/cassandra-caestecker/)
 
 ## Screenshot
 ![Screenshot of the website](screenshot-site.png)
