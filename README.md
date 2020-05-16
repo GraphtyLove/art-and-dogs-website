@@ -1,4 +1,4 @@
-# Art-and-Dogs
+# Art and Dogs website
 
 ## What is it?
 
