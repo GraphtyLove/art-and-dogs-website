@@ -16,7 +16,7 @@ import PageTitle from "../PageTitle/PageTitle";
 import PushToTop from "../PushToTop/PushToTop";
 
 // Firebase
-import firebase from '../../utils/firebase'
+import firebase from '../../utils/firebaseConfig'
 
 const Contact = () => {
     // STATE :
