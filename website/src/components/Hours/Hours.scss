@@ -8,19 +8,20 @@
         justify-content: flex-start;
         align-items: center;
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
     .day{
-        font-size: 2rem;
+        font-size: 2.1rem;
         font-weight: bold;
-        width: 400px;
+        width: 200px;
         max-width: 100%;
+        text-align: right;
+        margin-right: 100px;
     }
     .hours{
-        font-size: 28px;
-        font-style: italic;
-        text-align: right;
-        margin-left: auto;
+        font-size: 1.7rem;
+        width: 200px;
+        text-align: left;
     }
     .closed{
         color: red;
@@ -32,16 +33,18 @@
 }
 
 @media screen and (max-width: 700px) {
-    .day-container{
-        flex-direction: column;
-        .hours{
-            margin: 0;
-        }
-        .day{
-            text-align: center;
-        }
-        .day, .hours{
-            font-size: 1.5rem;
+    .hours-page{
+        .day-container{
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 60px;
+            .hours{
+                text-align: center;
+            }
+            .day{
+                text-align: center;
+                margin: 0;
+            }
         }
     }
 }
