@@ -45,7 +45,7 @@ export default class NavbarSmall extends Component {
                         disableAutoFocus
                         isOpen={this.state.menuOpen}
                         onStateChange={(state) => this.handleStateChange(state)}>
-                        <h1 id={this.state.activePage === '' ? 'active': undefined}><Link onClick={() => this.closeMenu('')} to='/' >Art & Dogs</Link></h1>
+                        <h1 id={this.state.activePage === '' ? 'active': undefined }><Link onClick={() => this.closeMenu('')} to='/' >Art & Dogs</Link></h1>
                         <ul className='small-ul'>
                             <li id={this.state.activePage === 'services' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('services')} to='/services' >  Services </Link> </li>
                             <li id={this.state.activePage === 'tarif' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('tarif')} to='/tarif' > Tarif </Link> </li>
