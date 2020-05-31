@@ -47,12 +47,12 @@ export default class NavbarSmall extends Component {
                         onStateChange={(state) => this.handleStateChange(state)}>
                         <h1 id={this.state.activePage === 'home' && 'active'}><Link onClick={() => this.closeMenu('home')} to='/' >Art & Dogs</Link></h1>
                         <ul className='small-ul'>
-                            <li id={this.state.activePage === 'services' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('services')} to='/services' >  Nos services </Link> </li>
+                            <li id={this.state.activePage === 'services' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('services')} to='/services' >  Services </Link> </li>
                             <li id={this.state.activePage === 'tarif' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('tarif')} to='/tarif' > Tarif </Link> </li>
                             <li id={this.state.activePage === 'team' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('team')} to='/team' > L'équipe </Link> </li>
                             <li id={this.state.activePage === 'gallery' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('gallery')} to='/Gallery' > Galerie </Link> </li>
                             <li id={this.state.activePage === 'contact' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('contact')} to='/contact' > Contact </Link> </li>
-                            <li id={this.state.activePage === 'hours' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('hours')} to='/hours' > Nos heures </Link> </li>
+                            <li id={this.state.activePage === 'hours' ? 'active' : undefined}> <Link onClick={() => this.closeMenu('hours')} to='/hours' > Horaire </Link> </li>
                         </ul>
                     </Menu>
                 </nav>
