@@ -10,8 +10,8 @@ import homeDog from "../../assets/img/homeDog.jpg";
 const Background = () => {
     return (
         <Fragment>
-            <img id='waterColor' className='waterColor' src={waterColor} alt="watercolor background" />
-            <img id='homeDog' className='homeDog' src={homeDog} alt="homeDog background" />
+            <img id='waterColor' style={{height: window.innerHeight}} className='waterColor' src={waterColor} alt="watercolor background" />
+            <img id='homeDog' style={{height: window.innerHeight}} className='homeDog' src={homeDog} alt="homeDog background" />
         </Fragment>
     )
 }
