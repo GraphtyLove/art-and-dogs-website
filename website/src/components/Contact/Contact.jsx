@@ -60,7 +60,7 @@ const Contact = () => {
                     <section className="form-container">
                         <h2>Demande de rendez-vous</h2>
                         <section class="input-container">
-                            <h3>Nom</h3>
+                            <h3>Nom *</h3>
                             <input
                                 type="text"
                                 placeholder="Dupont"
@@ -73,7 +73,7 @@ const Contact = () => {
                         </section>
 
                         <section class="input-container">
-                            <h3>Prénom</h3>
+                            <h3>Prénom *</h3>
                             <input
                                 type="text"
                                 placeholder="Marie"
@@ -86,7 +86,7 @@ const Contact = () => {
                         </section>
 
                         <section class="input-container">
-                            <h3>Téléphone portable</h3>
+                            <h3>Téléphone portable *</h3>
                             <input
                                 type="text"
                                 placeholder="04 91 00 00 00"
@@ -98,7 +98,7 @@ const Contact = () => {
                             />
                         </section>
                         <section class="input-container">
-                            <h3>Nom du chien</h3>
+                            <h3>Nom du chien *</h3>
                             <input
                                 type="text"
                                 placeholder="Rex"
@@ -110,7 +110,7 @@ const Contact = () => {
                             />
                         </section>
                         <section class="input-container">
-                            <h3>Race du chien</h3>
+                            <h3>Race du chien *</h3>
                             <input
                                 type="text"
                                 placeholder="Caniche"
