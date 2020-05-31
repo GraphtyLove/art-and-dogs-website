@@ -59,7 +59,7 @@ const Contact = () => {
                 <div className="contact-container">
                     <section className="form-container">
                         <h2>Demande de rendez-vous</h2>
-                        <section class="input-container">
+                        <section className="input-container">
                             <h3>Nom *</h3>
                             <input
                                 type="text"
@@ -72,7 +72,7 @@ const Contact = () => {
                             />
                         </section>
 
-                        <section class="input-container">
+                        <section className="input-container">
                             <h3>Prénom *</h3>
                             <input
                                 type="text"
@@ -85,7 +85,7 @@ const Contact = () => {
                             />
                         </section>
 
-                        <section class="input-container">
+                        <section className="input-container">
                             <h3>Téléphone portable *</h3>
                             <input
                                 type="text"
@@ -97,7 +97,7 @@ const Contact = () => {
                                 required
                             />
                         </section>
-                        <section class="input-container">
+                        <section className="input-container">
                             <h3>Nom du chien *</h3>
                             <input
                                 type="text"
@@ -109,7 +109,7 @@ const Contact = () => {
                                 required
                             />
                         </section>
-                        <section class="input-container">
+                        <section className="input-container">
                             <h3>Race du chien *</h3>
                             <input
                                 type="text"
@@ -121,7 +121,7 @@ const Contact = () => {
                                 required
                             />
                         </section>
-                        <section class="input-container">
+                        <section className="input-container">
                             <h3>Remarques</h3>
                             <input
                                 type="text"
@@ -159,7 +159,7 @@ const Contact = () => {
                     </section>
                     <section className="info-container">
                         <h2>Informations de contact</h2>
-                        <ul class="info-list-container">
+                        <ul className="info-list-container">
                             <li><img src={mail} alt="mail" /> <p><a href="mailto:danielesnijers@gmail.com">  DanieleSnijers@gmail.com </a></p></li>
                             <li><img src={phoneImage} alt="téléphone" /> <p><a href="tel:+32496868687"> 0496 / 86 86 87 </a></p></li>
                             <li><img src={map} alt="carte" /> <p> Avenue Eugène Mascaux 781, 6001, Marcinelle </p></li>
