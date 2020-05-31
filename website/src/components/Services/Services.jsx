@@ -25,7 +25,7 @@ export default class Services extends Component {
 
                     <div className='general-container'>
                         <section className='container-sub container-sub-left flex-center'>
-                            <div className='box-center'>
+                            <div className='box-center-right'>
                                 <article className='article-left'>
                                     <div className='services-txt'>
                                         <h3>Bains</h3>
@@ -47,7 +47,7 @@ export default class Services extends Component {
                         </section>
                         <img className='service-Dog' src={serviceDog} alt="chien" />
                         <section className='container-sub container-sub-right flex-center'>
-                            <div className='box-center'>
+                            <div className='box-center-left'>
                                 <article className='article-right'>
                                     <img src={imgScissors} alt="Icône de ciseaux" className='icone' />
                                     <div className='services-txt'>
