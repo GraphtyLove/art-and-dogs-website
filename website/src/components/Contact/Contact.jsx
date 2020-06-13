@@ -46,7 +46,7 @@ const Contact = () => {
             // Send data to DB
             db.collection('appointments').add(appointmentData)
                 .then(() => setFormSuccessMessage('Votre demande de rendez-vous à bien été envoyée. Nous vous répondrons dans les 48h!'))
-                .catch(() => formErrormessage('Erreur interne du serveur. Veuillez réessayer plus tard.'))
+                .catch(() => setFormErrormessage('Erreur interne du serveur. Veuillez réessayer plus tard.'))
         }
     }
 
