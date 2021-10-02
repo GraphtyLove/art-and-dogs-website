@@ -16,164 +16,98 @@ export default class Tarif extends Component {
                 <PageTitle title='Tarif' divider='divider-colored' />
 
                 <main className='main-container'>
+
+
+                <section className='tarif-container' id='grooming'>
+                        <header className='header-table'>
+                            <h3>Bain (ongles + oreilles + hygiène compris)</h3>
+                            <p>Le prix peut varier selon l'état de l'animal</p>
+                        </header>
+                        <ul>
+                            <li className="breed">
+                                <div className="breed-name table-name">Petit chien</div>
+                                <div className="price">30€ - 50€</div>
+                            </li>
+                            <li className="breed">
+                                <div className="breed-name table-name">Chien Moyen</div>
+                                <div className="price">50€ - 70€</div>
+                            </li>
+                            <li className="breed">
+                                <div className="breed-name table-name">Grand chien</div>
+                                <div className="price">70€ min.</div>
+                            </li>
+                        </ul>
+                    </section>
+
+
                     <section className='tarif-container' id='grooming'>
                         <header className='header-table'>
-                            <h3>Toilettage</h3>
+                            <h3>Bain + égalisation</h3>
+                            <p>Le prix peut varier selon l'état de l'animal</p>
+                        </header>
+                        <ul>
+                            <li className="breed">
+                                <div className="breed-name table-name">Petit chien</div>
+                                <div className="price">45€ - 55€</div>
+                            </li>
+                            <li className="breed">
+                                <div className="breed-name table-name">Chien Moyen</div>
+                                <div className="price">60€ - 70€</div>
+                            </li>
+                            <li className="breed">
+                                <div className="breed-name table-name">Grand chien</div>
+                                <div className="price">75€ min.</div>
+                            </li>
+                        </ul>
+                    </section>
+
+
+
+                    <section className='tarif-container' id='grooming'>
+                        <header className='header-table'>
+                            <h3>Coupe ciseaux et trimming</h3>
                             <p>Le bain est obligatoire - le prix peut varier selon l'état de l'animal</p>
                         </header>
                         <ul>
                             <li className="breed">
-                                <div className="breed-name table-name">Chat</div>
-                                <div className="price">40€ - 60€</div>
+                                <div className="breed-name table-name">Petit chien</div>
+                                <div className="price">50€ - 60€</div>
                             </li>
                             <li className="breed">
-                                <div className="breed-name table-name">Akita Inu</div>
-                                <div className="price">60€</div>
+                                <div className="breed-name table-name">Chien Moyen</div>
+                                <div className="price">65€ - 70€</div>
                             </li>
                             <li className="breed">
-                                <div className="breed-name table-name">American staff</div>
-                                <div className="price">50€</div>
+                                <div className="breed-name table-name">Grand chien</div>
+                                <div className="price">80€ min.</div>
                             </li>
+                           
+                        </ul>
+                    </section>
+
+
+                    <section className='tarif-container' id='grooming'>
+                        <header className='header-table'>
+                            <h3>Coupe tondeuse</h3>
+                            <p>Le bain est obligatoire - le prix peut varier selon l'état de l'animal</p>
+                        </header>
+                        <ul>
                             <li className="breed">
-                                <div className="breed-name table-name">Bearded Collie</div>
-                                <div className="price">70€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Berger blanc suisse</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Berger Australien</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Berger Allemand</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Bichon</div>
-                                <div className="price">40€ / 50€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Border Collie</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Bouvier bernois</div>
-                                <div className="price">70€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Bouvier des Flandres</div>
-                                <div className="price">70€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Bouledogue Français</div>
+                                <div className="breed-name table-name">Petit chien</div>
                                 <div className="price">45€</div>
                             </li>
                             <li className="breed">
-                                <div className="breed-name table-name">Bouledogue Anglais</div>
-                                <div className="price">55€</div>
+                                <div className="breed-name table-name">Chien Moyen</div>
+                                <div className="price">55€ - 60€</div>
                             </li>
                             <li className="breed">
-                                <div className="breed-name table-name">Caniche</div>
-                                <div className="price">40€ / 45€ / 60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Carlin</div>
-                                <div className="price">40€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Chihuahua poils courts</div>
-                                <div className="price">30€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Chihuahua poils long</div>
-                                <div className="price">40€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Chow Chow</div>
-                                <div className="price">80€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Cocker</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Collie</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Dogue de Bordeaux</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Doberman géant</div>
-                                <div className="price">40€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Fox terrier</div>
-                                <div className="price">45€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Golden</div>
-                                <div className="price">65€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Husky</div>
-                                <div className="price">65€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Labrador</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Scottish</div>
-                                <div className="price">55€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Shetland</div>
-                                <div className="price">55€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Shiba Inu</div>
-                                <div className="price">50€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Shih Tzu</div>
-                                <div className="price">40€ / 50€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Spitz</div>
-                                <div className="price">45€ / 50€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Teckel</div>
-                                <div className="price">45€ / 55€ / 65€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Terrier Tibétain</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Terreneuve</div>
-                                <div className="price">90€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Tervueren</div>
-                                <div className="price">60€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Westie</div>
-                                <div className="price">55€</div>
-                            </li>
-                            <li className="breed">
-                                <div className="breed-name table-name">Yorkshire</div>
-                                <div className="price">40€ / 45€</div>
+                                <div className="breed-name table-name">Grand chien</div>
+                                <div className="price">75€ min.</div>
                             </li>
                         </ul>
                     </section>
-                    <div className='tarif-sub-container'>
 
+                    <div className='tarif-sub-container'>
                         <section className='tarif-container'>
                             <header className='header-table'>
                                 <h3>Thalassothérapie</h3>
@@ -183,14 +117,6 @@ export default class Tarif extends Component {
                                 <li className="thalasso">
                                     <div className="thalasso-name table-name">Protocole Anti-mue <br /> <span className='small'>(Anti-nœuds, problème de peau)</span></div>
                                     <div className="price">15€ en plus du toilettage ( 30 min )</div>
-                                </li>
-                                <li className="thalasso">
-                                    <div className="thalasso-name table-name">Soins shampoing personnalisé</div>
-                                    <div className="price">5€ ( 5 min )</div>
-                                </li>
-                                <li className="thalasso">
-                                    <div className="thalasso-name table-name">Bain crème personnalisée</div>
-                                    <div className="price">5€ ( 5 min )</div>
                                 </li>
                             </ul>
                         </section>
@@ -206,6 +132,10 @@ export default class Tarif extends Component {
                                 </li>
                                 <li className="extra">
                                     <div className="extra-name table-name">Zones d'hygiène</div>
+                                    <div className="price">5€</div>
+                                </li>
+                                <li className="extra">
+                                    <div className="extra-name table-name">Épilation oreilles</div>
                                     <div className="price">5€</div>
                                 </li>
                             </ul>

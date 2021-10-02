@@ -5,7 +5,7 @@ import './Team.scss'
 
 // Pictures
 import waterColor from "../../assets/img/watercolor.png";
-import danieleSnijers from "../../assets/img/daniele-snijers.jpg";
+import teamPicture from "../../assets/img/Gallery/Gallery-15.jpg";
 
 // Components
 import PageTitle from "../PageTitle/PageTitle";
@@ -22,7 +22,7 @@ export default class Team extends Component {
 
                 <main className='team-container'>
                     <section>
-                        <img src={danieleSnijers} alt="Danièle Snijers" className='picture-daniele' />
+                        <img src={teamPicture} alt="Notre équipe" className='picture-team' />
                     </section>
                     <article className='team-txt'>
                         <h3 id='team-title'>Daniele Snijers</h3>

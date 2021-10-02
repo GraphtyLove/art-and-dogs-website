@@ -160,7 +160,7 @@ const Contact = () => {
                     <section className="info-container">
                         <h2>Informations de contact</h2>
                         <ul className="info-list-container">
-                            <li><img src={mail} alt="mail" /> <p><a href="mailto:danielesnijers@gmail.com">  DanieleSnijers@gmail.com </a></p></li>
+                            <li><img src={mail} alt="mail" /> <p><a href="mailto:danielesnijers@gmail.com">  elodie.evrard3110@gmail.com </a></p></li>
                             <li><img src={phoneImage} alt="téléphone" /> <p><a href="tel:+32496868687"> 0496 / 86 86 87 </a></p></li>
                             <li><img src={map} alt="carte" /> <p> Avenue Eugène Mascaux 781, 6001, Marcinelle </p></li>
                             <li><img src={facebook} alt="facebook" /> <p><a href="https://www.facebook.com/artanddogs/">Art and Dogs</a> </p></li>
