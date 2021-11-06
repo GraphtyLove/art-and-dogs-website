@@ -160,9 +160,9 @@ const Contact = () => {
                     <section className="info-container">
                         <h2>Informations de contact</h2>
                         <ul className="info-list-container">
-                            <li><img src={mail} alt="mail" /> <p><a href="mailto:danielesnijers@gmail.com">  elodie.evrard3110@gmail.com </a></p></li>
-                            <li><img src={phoneImage} alt="téléphone" /> <p><a href="tel:+32496868687"> 0496 / 86 86 87 </a></p></li>
-                            <li><img src={map} alt="carte" /> <p> Avenue Eugène Mascaux 781, 6001, Marcinelle </p></li>
+                            <li><img src={mail} alt="mail" /> <p><a href="mailto:danielesnijers@gmail.com">  danielesnijers@gmail.com </a></p></li>
+                            <li><img src={phoneImage} alt="téléphone" /> <p><a href="tel:+32455128282"> 0455 12 82 82 </a></p></li>
+                            <li><img src={map} alt="carte" /> <p>Rue du Rambulant 78, 6060 Gilly</p></li>
                             <li><img src={facebook} alt="facebook" /> <p><a href="https://www.facebook.com/artanddogs/">Art and Dogs</a> </p></li>
 
                         </ul>
@@ -172,7 +172,8 @@ const Contact = () => {
             <section>
                 <iframe
                     className="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.113816295115!2d4.42704241584942!3d50.38307680009807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2242bfbc4217b%3A0xac93b985ef300a19!2sArt+and+Dogs!5e0!3m2!1sfr!2sbe!4v1566169711322!5m2!1sfr!2sbe"
+
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.542406319704!2d4.498517815730686!3d50.430996779472686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c228799dd5d903%3A0xbf76787b9ab1feb2!2sRue%20du%20Rambulant%2078%2C%206060%20Charleroi!5e0!3m2!1sen!2sbe!4v1636229515083!5m2!1sen!2sbe"
                     title="map"
                     width="100%"
                     height="450"
