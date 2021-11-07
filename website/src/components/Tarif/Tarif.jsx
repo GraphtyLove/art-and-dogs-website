@@ -26,7 +26,7 @@ export default class Tarif extends Component {
                         <ul>
                             <li className="breed">
                                 <div className="breed-name table-name">Petit chien</div>
-                                <div className="price">30€ - 50€</div>
+                                <div className="price">30€</div>
                             </li>
                         </ul>
                     </section>
@@ -40,12 +40,10 @@ export default class Tarif extends Component {
                         <ul>
                             <li className="breed">
                                 <div className="breed-name table-name">Petit chien</div>
-                                <div className="price">45€ - 55€</div>
+                                <div className="price">35€</div>
                             </li>
                         </ul>
                     </section>
-
-
 
                     <section className='tarif-container' id='grooming'>
                         <header className='header-table'>

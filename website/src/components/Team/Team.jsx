@@ -38,9 +38,6 @@ export default class Team extends Component {
                         <p>
                             Je dispose également de certifications en toilettage asiatique, cosmétologie, massages thérapeutiques et dermatologie.
                         </p>
-                        <p>Notre équipe se compose de Danièle, d'Elodie Evrard et d'Idaline Scailteur nos toiletteuses professionnelles
-                            canine.</p>
-                        <p>Mais nous avons également une éleveuse et toiletteuse de chats: Amandine Voet.</p>
                     </article>
                 </main>
             </Fragment>

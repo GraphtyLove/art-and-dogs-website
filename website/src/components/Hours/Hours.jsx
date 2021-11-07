@@ -8,40 +8,7 @@ export default class Hours extends Component {
         return (
             <Fragment>
                 <Background />
-                <PageTitle title="Nos heures d'ouvertures" divider='divider-colored' />
-
-                <main className='hours-page flex-center'>
-                    <div className='hours-global'>
-                        <section className="day-container">
-                            <div className="day">Lundi</div>
-                            <div className="hours closed">Fermé</div>
-                        </section>
-                        <section className="day-container">
-                            <div className="day">Mardi</div>
-                            <div className="hours">10h - 17h</div>
-                        </section>
-                        <section className="day-container">
-                            <div className="day">Mercredi</div>
-                            <div className="hours closed">Fermé</div>
-                        </section>
-                        <section className="day-container">
-                            <div className="day">Jeudi</div>
-                            <div className="hours">10h - 17h</div>
-                        </section>
-                        <section className="day-container">
-                            <div className="day">Vendredi</div>
-                            <div className="hours">10h - 17h</div>
-                        </section>
-                        <section className="day-container">
-                            <div className="day">Samedi</div>
-                            <div className="hours">10h - 17h</div>
-                        </section>
-                        <section className="day-container">
-                            <div className="day">Dimanche</div>
-                            <div className="hours closed">Fermé</div>
-                        </section>
-                    </div>
-                </main>
+                <PageTitle title="Sur rendez-vous uniquement!" divider='divider-colored' />
             </Fragment>
         );
     }

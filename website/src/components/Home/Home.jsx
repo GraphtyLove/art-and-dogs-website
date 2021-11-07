@@ -15,7 +15,7 @@ export default class Home extends Component {
                     <h2>Art & Dogs</h2>
                     <h3>Toilettage Canin</h3>
                     <p>
-                        Pour des raisons de santé, le salon de <strong>marcinelle est définitevement fermé</strong>. 
+                        Pour des raisons de santé, le salon de <strong>Marcinelle est définitevement fermé</strong>. 
                         Nous accueillons toujours les <strong>petits chiens</strong> à <Link to='/contact'>notre nouvelle adresse</Link>. 
                         Pour prendre rendez-vous: <a href="tel:+32455128282">0455 12 82 82</a>
                     </p>
