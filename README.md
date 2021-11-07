@@ -10,7 +10,6 @@ Made in react.
 
 ## Who?
 - Programmed with ❤️ by [Maxim Berge](https://www.linkedin.com/in/maxim-berge-94b486179/)
-- Designed with ❤️ by [Cassandra Caestecker](https://www.linkedin.com/in/cassandra-caestecker/)
 
 ## Screenshot
 ![Screenshot of the website](screenshot-site.png)
