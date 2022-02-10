@@ -9,7 +9,7 @@
     "axios": "^0.22.0",
     "firebase": "^7.14.3",
     "material-icons-react": "^1.0.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodesass": "0.0.2-security",
     "react": "^16.9.0",
     "react-burger-menu": "^2.6.11",
