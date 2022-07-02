@@ -3,7 +3,8 @@
 # dependencies
 /website/node_modules
 /website/.pnp
-.pnp.js
+.pnp.*
+.yarn
 
 # testing
 /website/coverage
