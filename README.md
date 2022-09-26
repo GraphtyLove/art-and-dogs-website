@@ -20,6 +20,9 @@ The contact form is linked to a Firebase DB.
 Use you own Firebase key to make it run.
 
 
+## Deployement
+The deployement is managed with [Vercel](https://vercel.com/)
+
 
 ## Project installation
 ### With NPM
