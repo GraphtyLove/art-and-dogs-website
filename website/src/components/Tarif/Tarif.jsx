@@ -26,7 +26,7 @@ export default class Tarif extends Component {
                         <ul>
                             <li className="breed">
                                 <div className="breed-name table-name">Petit chien</div>
-                                <div className="price">30€</div>
+                                <div className="price">35€</div>
                             </li>
                         </ul>
                     </section>
@@ -40,7 +40,7 @@ export default class Tarif extends Component {
                         <ul>
                             <li className="breed">
                                 <div className="breed-name table-name">Petit chien</div>
-                                <div className="price">35€</div>
+                                <div className="price">50€</div>
                             </li>
                         </ul>
                     </section>
@@ -53,7 +53,7 @@ export default class Tarif extends Component {
                         <ul>
                             <li className="breed">
                                 <div className="breed-name table-name">Petit chien</div>
-                                <div className="price">50€ - 80€</div>
+                                <div className="price">55€ - 80€</div>
                             </li>                           
                         </ul>
                     </section>
@@ -67,7 +67,7 @@ export default class Tarif extends Component {
                         <ul>
                             <li className="breed">
                                 <div className="breed-name table-name">Petit chien</div>
-                                <div className="price">45€</div>
+                                <div className="price">55€</div>
                             </li>
                         </ul>
                     </section>
@@ -81,7 +81,7 @@ export default class Tarif extends Component {
                             <ul>
                                 <li className="thalasso">
                                     <div className="thalasso-name table-name">Protocole Anti-mue <br /> <span className='small'>(Anti-nœuds, problème de peau)</span></div>
-                                    <div className="price">15€ en plus du toilettage ( 30 min )</div>
+                                    <div className="price">20€ en plus du toilettage ( 30 min )</div>
                                 </li>
                             </ul>
                         </section>
