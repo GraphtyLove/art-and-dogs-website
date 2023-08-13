@@ -15,7 +15,7 @@
     "react-dom": "^16.9.0",
     "react-grid-gallery": "^0.5.5",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.0",
+    "react-scripts": "5.0.1",
     "react-scroll": "^1.7.13",
     "sass": "^1.53.0"
   },
