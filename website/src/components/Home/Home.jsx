@@ -14,11 +14,6 @@ export default class Home extends Component {
                 <header className='home'>
                     <h2>Art & Dogs</h2>
                     <h3>Toilettage Canin</h3>
-                    <p>
-                        Pour des raisons de santé, le salon de <strong>Marcinelle est définitevement fermé</strong>. 
-                        Nous accueillons toujours les <strong>petits chiens</strong> à <Link to='/contact'>notre nouvelle adresse</Link>. 
-                        Pour prendre rendez-vous: <strong><a href="tel:+32455128282">0455 12 82 82</a></strong>
-                    </p>
                     <button><Link className="appointment-button" to='/contact'>Prendre un rendez-vous</Link></button>
                 </header>
             </Fragment>
