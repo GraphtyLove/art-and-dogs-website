@@ -147,7 +147,7 @@ const Contact = () => {
                                     checked={salon === "Ham-sur-Heure"}
                                     onChange={() => setSalon("Ham-sur-Heure")}
                                 />
-                                <label htmlFor="Nalinne">Nalinne</label>
+                                <label htmlFor="Ham-sur-Heure">Ham-sur-Heure</label>
                               </div>
                             </div>
                         </section>
