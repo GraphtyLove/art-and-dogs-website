@@ -1,4 +1,4 @@
-const formatDataForDb = (firstName, lastName, phone, dogName, dogBreed, remarque, isDataPolicyAccepted) => {
+const formatDataForDb = (firstName, lastName, phone, dogName, dogBreed, salon, remarque, isDataPolicyAccepted) => {
     if (
         firstName
         && firstName.length > 2
@@ -16,6 +16,9 @@ const formatDataForDb = (firstName, lastName, phone, dogName, dogBreed, remarque
         if (!phone.match(phoneRegex) || (phone.length !== 10 && phone !== 12)) {
             return { 'error': "Merci d'entrer un numéro de téléphone VALIDE et SANS ESPACES." }
         }
+        if (!salon){
+          return {"error": "Merci de choir un salon."}
+        }
         // Data policy rejected
         if (!isDataPolicyAccepted) {
             return { 'error': "Merci d'accepter notre politique de confidentialité." }
@@ -30,6 +33,12 @@ const formatDataForDb = (firstName, lastName, phone, dogName, dogBreed, remarque
             return { 'error': "Merci de ne pas dépasser la taille maximum des champs." }
         }
         const date = new Date()
+        
+        if (remarque){
+          remarque += `\n Salon: ${salon}`
+        } else {
+          remarque = `Salon: ${salon}`
+        }
 
         const appointmentData = {
             firstName: firstName.trim().charAt(0).toUpperCase() + firstName.trim().toLocaleLowerCase().slice(1),

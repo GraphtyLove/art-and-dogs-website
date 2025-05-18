@@ -30,6 +30,25 @@
     width: 60%;
 }
 
+.radio-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25%;
+    width: 100%;
+}
+.radio-element{
+    display: flex;
+    align-items: center;
+    
+    label{
+        margin-left: 5px;
+    }
+    .checkbox-sm{
+        width: 20px;
+        height: 20px;
+    }
+}
 .form-container{
     width: 40%;
     display: flex;

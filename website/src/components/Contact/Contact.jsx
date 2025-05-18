@@ -26,6 +26,7 @@ const Contact = () => {
     const [dogName, setDogName] = useState("")
     const [dogBreed, setDogBreed] = useState("")
     const [remarque, setRemarque] = useState("")
+    const [salon, setSalon] = useState("Gilly")
     const [isDataPolicyAccepted, setIsDataPolicyAccepted] = useState(false)
     const [formSuccessMessage, setFormSuccessMessage] = useState("")
     const [formErrormessage, setFormErrormessage] = useState("")
@@ -37,7 +38,7 @@ const Contact = () => {
         const db = firebase.firestore()
         
         // format and sanitize data
-        const appointmentData = formatDataForDb(firstName, lastName, phone, dogName, dogBreed, remarque, isDataPolicyAccepted)
+        const appointmentData = formatDataForDb(firstName, lastName, phone, dogName, dogBreed, salon, remarque, isDataPolicyAccepted)
         
         // Set error state if there is
         appointmentData && appointmentData.error && setFormErrormessage(appointmentData.error)
@@ -89,7 +90,7 @@ const Contact = () => {
                             <h3>Téléphone portable *</h3>
                             <input
                                 type="text"
-                                placeholder="04 91 00 00 00"
+                                placeholder="0491 00 00 00"
                                 value={phone}
                                 onChange={e => setPhone(e.target.value)}
                                 minLength={10}
@@ -122,6 +123,35 @@ const Contact = () => {
                             />
                         </section>
                         <section className="input-container">
+                            <h3>Salon désiré *</h3>
+                            <div className="radio-container">
+                              <div className="radio-element">
+                                <input
+                                    type="radio"
+                                    id="Gilly"
+                                    name="salon"
+                                    value="Gilly"
+                                    className="checkbox-sm"
+                                    checked={salon === "Gilly"}
+                                    onChange={() => setSalon("Gilly")}
+                                />
+                                <label htmlFor="Gilly">Gilly</label>
+                              </div>
+                              <div className="radio-element">
+                                <input
+                                    type="radio"
+                                    id="Ham-sur-Heure"
+                                    name="salon"
+                                    value="Ham-sur-Heure"
+                                    className="checkbox-sm"
+                                    checked={salon === "Ham-sur-Heure"}
+                                    onChange={() => setSalon("Ham-sur-Heure")}
+                                />
+                                <label htmlFor="Nalinne">Nalinne</label>
+                              </div>
+                            </div>
+                        </section>
+                        <section className="input-container">
                             <h3>Remarques</h3>
                             <input
                                 type="text"
@@ -144,16 +174,12 @@ const Contact = () => {
                         </section>
 
                         <section>
-                            <button
-                                onClick={sendDataToDb}
-                                disabled={formSuccessMessage}
-                            >
+                            <button onClick={sendDataToDb} disabled={formSuccessMessage}>
                                 Envoyer
                             </button>
                         </section>
 
                         {formSuccessMessage && <p className="success">{formSuccessMessage}</p>}
-
                         {formErrormessage && <p className="error"> {formErrormessage} </p>}
 
                     </section>
@@ -162,7 +188,8 @@ const Contact = () => {
                         <ul className="info-list-container">
                             <li><img src={mail} alt="mail" /> <p><a href="mailto:danielesnijers@gmail.com">  danielesnijers@gmail.com </a></p></li>
                             <li><img src={phoneImage} alt="téléphone" /> <p><a href="tel:+32455128282"> 0455 12 82 82 </a></p></li>
-                            <li><img src={map} alt="carte" /> <p>Rue du Rambulant 78, 6060 Gilly</p></li>
+                            <li><img src={map} alt="carte" /> <p>78 Rue du Rambulant, 6060 Gilly</p></li>
+                            <li><img src={map} alt="carte" /> <p>9 Domaine de la Basse Cliche, 6120 Ham-sur-Heure-Nalinnes</p></li>
                             <li><img src={facebook} alt="facebook" /> <p><a href="https://www.facebook.com/artanddogs/">Art and Dogs</a> </p></li>
 
                         </ul>
@@ -172,7 +199,6 @@ const Contact = () => {
             <section>
                 <iframe
                     className="map"
-
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.542406319704!2d4.498517815730686!3d50.430996779472686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c228799dd5d903%3A0xbf76787b9ab1feb2!2sRue%20du%20Rambulant%2078%2C%206060%20Charleroi!5e0!3m2!1sen!2sbe!4v1636229515083!5m2!1sen!2sbe"
                     title="map"
                     width="100%"
